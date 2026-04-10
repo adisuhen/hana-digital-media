@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Kebijakan Privasi PT Hana Digital Media — Perlindungan data pribadi pelanggan e-commerce rumah tangga, fashion, dan lifestyle." />
+  <meta name="author" content="PT Hana Digital Media" />
+  <meta name="robots" content="index, follow" />
+  <title>Kebijakan Privasi | PT Hana Digital Media</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --coral:   #E8614A;
+      --coral-d: #C94A35;
+      --blush:   #F9EDE8;
+      --sand:    #F5F0EA;
+      --cream:   #FDFAF7;
+      --charcoal:#1C1C1E;
+      --dark:    #2C2C2E;
+      --muted:   #6E6E73;
+      --border:  rgba(28,28,30,0.10);
+      --green:   #2E7D52;
+      --ff-head: 'Playfair Display', Georgia, serif;
+      --ff-body: 'Plus Jakarta Sans', sans-serif;
+      --shadow:  0 4px 24px rgba(28,28,30,.08);
+      --shadow-lg: 0 16px 48px rgba(28,28,30,.12);
+    }
+
+    html { scroll-behavior: smooth; }
+    body { font-family: var(--ff-body); color: var(--charcoal); background: var(--cream); overflow-x: hidden; }
+
+    /* ───── NAV ───── */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 200;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 1rem 5%;
+      background: rgba(253,250,247,.95);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--border);
+      transition: box-shadow .3s;
+    }
+    nav.scrolled { box-shadow: 0 2px 20px rgba(28,28,30,.08); }
+    .logo-wrap { display: flex; align-items: center; gap: .65rem; text-decoration: none; }
+    .logo-icon {
+      width: 38px; height: 38px;
+      background: linear-gradient(135deg, #E8614A 0%, #C94A35 100%);
+      border-radius: 10px;
+      display: flex; align-items: center; justify-content: center;
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 1.45rem; font-weight: 700; font-style: italic;
+      color: #fff; letter-spacing: -.03em; line-height: 1; flex-shrink: 0;
+      box-shadow: 0 2px 12px rgba(232,97,74,.45), inset 0 1px 0 rgba(255,255,255,.18);
+      text-shadow: 0 1px 4px rgba(0,0,0,.18);
+    }
+    .logo-text { font-family: var(--ff-head); font-size: 1.2rem; font-weight: 700; color: var(--charcoal); line-height: 1; }
+    .logo-text small { display: block; font-family: var(--ff-body); font-size: .6rem; font-weight: 500; color: var(--muted); letter-spacing: .12em; text-transform: uppercase; margin-top: 2px; font-style: normal; }
+    .nav-links { display: flex; gap: 2.2rem; list-style: none; }
+    .nav-links a { text-decoration: none; font-size: .875rem; font-weight: 500; color: var(--dark); transition: color .2s; }
+    .nav-links a:hover { color: var(--coral); }
+    .nav-cta {
+      background: var(--coral); color: #fff !important;
+      padding: .5rem 1.3rem; border-radius: 6px;
+      transition: background .2s, transform .15s !important;
+    }
+    .nav-cta:hover { background: var(--coral-d) !important; transform: translateY(-1px) !important; }
+    .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 4px; }
+    .hamburger span { width: 22px; height: 2px; background: var(--charcoal); border-radius: 2px; transition: all .3s; }
+
+    /* ───── PAGE HERO ───── */
+    .page-hero {
+      padding: 9rem 5% 4rem;
+      background: var(--sand);
+      border-bottom: 1px solid var(--border);
+    }
+    .page-hero .breadcrumb {
+      font-size: .78rem; color: var(--muted); margin-bottom: 1rem;
+    }
+    .page-hero .breadcrumb a { color: var(--coral); text-decoration: none; }
+    .page-hero .breadcrumb a:hover { text-decoration: underline; }
+    .page-hero h1 {
+      font-family: var(--ff-head); font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 700; color: var(--charcoal); line-height: 1.2;
+      letter-spacing: -.02em; margin-bottom: .8rem;
+    }
+    .page-hero p { font-size: .95rem; color: var(--muted); line-height: 1.7; max-width: 600px; }
+    .page-meta {
+      display: flex; gap: 2rem; margin-top: 1.5rem; flex-wrap: wrap;
+    }
+    .page-meta span { font-size: .8rem; color: var(--muted); }
+    .page-meta strong { color: var(--charcoal); }
+
+    /* ───── CONTENT LAYOUT ───── */
+    .content-wrap {
+      display: grid; grid-template-columns: 260px 1fr;
+      gap: 4rem; padding: 4rem 5%; max-width: 1200px; margin: 0 auto;
+    }
+
+    /* Sticky TOC sidebar */
+    .toc {
+      position: sticky; top: 100px; height: fit-content;
+    }
+    .toc h3 {
+      font-size: .7rem; font-weight: 700; text-transform: uppercase;
+      letter-spacing: .14em; color: var(--muted); margin-bottom: 1rem;
+    }
+    .toc ul { list-style: none; }
+    .toc ul li { margin-bottom: .2rem; }
+    .toc ul li a {
+      font-size: .83rem; color: var(--muted); text-decoration: none;
+      padding: .35rem .8rem; border-radius: 6px; display: block;
+      transition: all .2s; border-left: 2px solid transparent;
+    }
+    .toc ul li a:hover { color: var(--coral); background: var(--blush); border-left-color: var(--coral); }
+    .toc ul li a.active { color: var(--coral); background: var(--blush); border-left-color: var(--coral); font-weight: 600; }
+
+    /* Main article */
+    .legal-content { min-width: 0; }
+    .legal-section {
+      margin-bottom: 3rem;
+      padding-bottom: 3rem;
+      border-bottom: 1px solid var(--border);
+    }
+    .legal-section:last-child { border-bottom: none; margin-bottom: 0; }
+    .section-num {
+      font-size: .7rem; font-weight: 700; text-transform: uppercase;
+      letter-spacing: .14em; color: var(--coral); margin-bottom: .5rem;
+      display: flex; align-items: center; gap: .5rem;
+    }
+    .section-num::before { content: ''; width: 20px; height: 2px; background: var(--coral); border-radius: 2px; }
+    .legal-section h2 {
+      font-family: var(--ff-head); font-size: 1.5rem; font-weight: 700;
+      color: var(--charcoal); margin-bottom: 1.2rem; line-height: 1.3;
+    }
+    .legal-section p {
+      font-size: .92rem; color: var(--dark); line-height: 1.85;
+      margin-bottom: 1rem;
+    }
+    .legal-section p:last-child { margin-bottom: 0; }
+    .legal-section ul, .legal-section ol {
+      padding-left: 1.5rem; margin: .8rem 0 1rem;
+    }
+    .legal-section li {
+      font-size: .92rem; color: var(--dark); line-height: 1.75;
+      margin-bottom: .4rem;
+    }
+    .legal-section h3 {
+      font-size: 1rem; font-weight: 700; color: var(--charcoal);
+      margin: 1.5rem 0 .6rem;
+    }
+    .highlight-box {
+      background: var(--blush); border-left: 3px solid var(--coral);
+      border-radius: 0 10px 10px 0; padding: 1.2rem 1.4rem;
+      margin: 1.2rem 0;
+    }
+    .highlight-box p { margin-bottom: 0; font-size: .88rem; color: var(--dark); }
+
+    /* ───── FOOTER ───── */
+    footer { background: #F5F5F5; padding: 3.5rem 5% 2rem; }
+    .footer-main { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 3rem; margin-bottom: 3rem; }
+    .footer-brand p { font-size: .85rem; color: var(--muted); line-height: 1.75; margin-top: .9rem; max-width: 280px; }
+    .footer-col h4 { font-size: .8rem; font-weight: 700; text-transform: uppercase; letter-spacing: .12em; color: var(--muted); margin-bottom: 1rem; }
+    .footer-col ul { list-style: none; }
+    .footer-col ul li { margin-bottom: .6rem; }
+    .footer-col ul li a { color: var(--muted); text-decoration: none; font-size: .85rem; transition: color .2s; }
+    .footer-col ul li a:hover { color: var(--charcoal); }
+    .footer-bottom { border-top: 1px solid rgba(28,28,30,.1); padding-top: 1.5rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; }
+    .footer-bottom p { font-size: .78rem; color: var(--muted); }
+    .footer-legal { display: flex; gap: 2rem; }
+    .footer-legal a { font-size: .78rem; color: var(--muted); text-decoration: none; transition: color .2s; }
+    .footer-legal a:hover { color: var(--charcoal); }
+
+    /* ───── RESPONSIVE ───── */
+    @media (max-width: 900px) {
+      .content-wrap { grid-template-columns: 1fr; gap: 2rem; }
+      .toc { position: static; background: var(--sand); border-radius: 12px; padding: 1.2rem; }
+      .footer-main { grid-template-columns: 1fr 1fr; }
+      .nav-links { display: none; }
+      .hamburger { display: flex; }
+    }
+    @media (max-width: 600px) {
+      .footer-main { grid-template-columns: 1fr; gap: 2rem; }
+      .footer-bottom { flex-direction: column; text-align: center; }
+      .page-meta { flex-direction: column; gap: .5rem; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ══ NAV ══ -->
+<nav id="nav">
+  <a href="index.html" class="logo-wrap">
+    <div class="logo-icon">H</div>
+    <div class="logo-text">Hana Digital Media<small>PT Hana Digital Media</small></div>
+  </a>
+  <ul class="nav-links">
+    <li><a href="index.html#tentang">Tentang</a></li>
+    <li><a href="index.html#kategori">Kategori</a></li>
+    <li><a href="index.html#platform">Platform</a></li>
+    <li><a href="index.html#google-ads">Iklan Digital</a></li>
+    <li><a href="index.html#kontak" class="nav-cta">Hubungi Kami</a></li>
+  </ul>
+  <div class="hamburger" onclick="this.parentElement.querySelector('.nav-links').style.display='flex'">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+<!-- ══ PAGE HERO ══ -->
+<div class="page-hero">
+  <div class="breadcrumb"><a href="index.html">Beranda</a> › Kebijakan Privasi</div>
+  <h1>Kebijakan Privasi</h1>
+  <p>PT Hana Digital Media berkomitmen melindungi privasi dan keamanan data pribadi seluruh pengguna platform kami. Kebijakan ini menjelaskan bagaimana kami mengumpulkan, menggunakan, dan melindungi informasi Anda.</p>
+  <div class="page-meta">
+    <span><strong>Berlaku sejak:</strong> 1 Januari 2026</span>
+    <span><strong>Terakhir diperbarui:</strong> 1 April 2026</span>
+    <span><strong>Versi:</strong> 2.0</span>
+  </div>
+</div>
+
+<!-- ══ CONTENT ══ -->
+<div class="content-wrap">
+
+  <!-- Sidebar TOC -->
+  <aside class="toc">
+    <h3>Daftar Isi</h3>
+    <ul>
+      <li><a href="#s1">1. Pendahuluan</a></li>
+      <li><a href="#s2">2. Data yang Kami Kumpulkan</a></li>
+      <li><a href="#s3">3. Cara Kami Menggunakan Data</a></li>
+      <li><a href="#s4">4. Dasar Hukum Pemrosesan</a></li>
+      <li><a href="#s5">5. Berbagi Data dengan Pihak Ketiga</a></li>
+      <li><a href="#s6">6. Keamanan Data</a></li>
+      <li><a href="#s7">7. Penyimpanan & Retensi Data</a></li>
+      <li><a href="#s8">8. Hak-Hak Anda</a></li>
+      <li><a href="#s9">9. Cookie & Teknologi Pelacakan</a></li>
+      <li><a href="#s10">10. Data Anak-Anak</a></li>
+      <li><a href="#s11">11. Perubahan Kebijakan</a></li>
+      <li><a href="#s12">12. Hubungi Kami</a></li>
+    </ul>
+  </aside>
+
+  <!-- Main Content -->
+  <article class="legal-content">
+
+    <div class="legal-section" id="s1">
+      <div class="section-num">Pasal 01</div>
+      <h2>Pendahuluan</h2>
+      <p>PT Hana Digital Media ("Perusahaan", "kami", "kita") adalah perusahaan e-commerce yang berkantor pusat di Perumahan Palem Ganda Asri, Jl. Kijang Raya A2/20, Kel. Meruyung, Kec. Limo, Kota Depok, Jawa Barat 16514, Indonesia, yang bergerak di bidang penjualan produk kebutuhan rumah tangga, fashion, dan lifestyle secara online.</p>
+      <p>Kebijakan Privasi ini mengatur bagaimana PT Hana Digital Media mengumpulkan, menggunakan, mengungkapkan, dan melindungi informasi pribadi yang Anda berikan kepada kami saat menggunakan platform, layanan, aplikasi, serta seluruh saluran komunikasi kami, termasuk website resmi, toko di marketplace (Shopee, TikTok Shop), dan media sosial.</p>
+      <p>Dengan mengakses atau menggunakan layanan kami, Anda menyatakan telah membaca, memahami, dan menyetujui Kebijakan Privasi ini. Jika Anda tidak menyetujui kebijakan ini, mohon untuk tidak menggunakan layanan kami.</p>
+      <div class="highlight-box">
+        <p>Kebijakan Privasi ini disusun sesuai dengan Undang-Undang No. 27 Tahun 2022 tentang Perlindungan Data Pribadi (UU PDP) dan peraturan perundang-undangan terkait yang berlaku di Indonesia.</p>
+      </div>
+    </div>
+
+    <div class="legal-section" id="s2">
+      <div class="section-num">Pasal 02</div>
+      <h2>Data Pribadi yang Kami Kumpulkan</h2>
+      <p>Kami mengumpulkan berbagai jenis data pribadi yang diperlukan untuk menjalankan layanan kami secara optimal. Data yang kami kumpulkan meliputi:</p>
+
+      <h3>2.1 Data yang Anda Berikan Secara Langsung</h3>
+      <ul>
+        <li><strong>Identitas:</strong> Nama lengkap, nomor KTP/identitas (bila diperlukan untuk verifikasi)</li>
+        <li><strong>Kontak:</strong> Alamat email, nomor telepon/WhatsApp</li>
+        <li><strong>Alamat:</strong> Alamat pengiriman lengkap termasuk kota, provinsi, dan kode pos</li>
+        <li><strong>Akun:</strong> Username, kata sandi terenkripsi, dan preferensi akun</li>
+        <li><strong>Komunikasi:</strong> Pesan yang Anda kirimkan melalui formulir kontak, live chat, atau email</li>
+        <li><strong>Transaksi:</strong> Riwayat pembelian, metode pembayaran (tidak termasuk nomor kartu penuh), dan preferensi produk</li>
+      </ul>
+
+      <h3>2.2 Data yang Kami Kumpulkan Secara Otomatis</h3>
+      <ul>
+        <li><strong>Teknis:</strong> Alamat IP, jenis perangkat, sistem operasi, jenis browser</li>
+        <li><strong>Perilaku:</strong> Halaman yang dikunjungi, produk yang dilihat, waktu kunjungan, klik, dan interaksi</li>
+        <li><strong>Lokasi:</strong> Lokasi perkiraan berdasarkan alamat IP (tidak melacak lokasi GPS tanpa izin eksplisit)</li>
+        <li><strong>Cookie:</strong> Data sesi, preferensi tampilan, dan token autentikasi</li>
+      </ul>
+
+      <h3>2.3 Data dari Pihak Ketiga</h3>
+      <ul>
+        <li>Data dari marketplace (Shopee, TikTok Shop) saat Anda berbelanja melalui platform tersebut</li>
+        <li>Data agregat dari Meta (Facebook/Instagram) dan Google terkait interaksi iklan</li>
+        <li>Data verifikasi dari penyedia layanan pembayaran</li>
+      </ul>
+    </div>
+
+    <div class="legal-section" id="s3">
+      <div class="section-num">Pasal 03</div>
+      <h2>Cara Kami Menggunakan Data Anda</h2>
+      <p>Data pribadi Anda digunakan semata-mata untuk tujuan yang sah dan relevan, yaitu:</p>
+      <ul>
+        <li><strong>Memproses pesanan</strong> — Mengelola, mengkonfirmasi, dan mengirimkan pesanan Anda ke alamat yang ditentukan</li>
+        <li><strong>Layanan pelanggan</strong> — Merespons pertanyaan, keluhan, permintaan retur, dan kebutuhan dukungan lainnya</li>
+        <li><strong>Personalisasi</strong> — Menampilkan rekomendasi produk, penawaran, dan konten yang relevan dengan minat Anda</li>
+        <li><strong>Pemasaran</strong> — Mengirimkan informasi promosi, flash sale, dan penawaran eksklusif melalui email atau WhatsApp (hanya jika Anda telah memberikan persetujuan)</li>
+        <li><strong>Analitik</strong> — Menganalisis tren penggunaan untuk meningkatkan kualitas layanan dan pengalaman berbelanja</li>
+        <li><strong>Keamanan</strong> — Mendeteksi, mencegah, dan menangani penipuan, penyalahgunaan, atau ancaman keamanan lainnya</li>
+        <li><strong>Kewajiban hukum</strong> — Memenuhi kewajiban hukum, peraturan, dan perintah dari otoritas berwenang</li>
+        <li><strong>Peningkatan platform</strong> — Melakukan riset, pengujian fitur baru, dan pengembangan produk/layanan</li>
+      </ul>
+    </div>
+
+    <div class="legal-section" id="s4">
+      <div class="section-num">Pasal 04</div>
+      <h2>Dasar Hukum Pemrosesan Data</h2>
+      <p>Seluruh pemrosesan data pribadi Anda dilakukan berdasarkan salah satu atau lebih dasar hukum berikut sesuai UU PDP No. 27 Tahun 2022:</p>
+      <ul>
+        <li><strong>Persetujuan (Consent):</strong> Anda telah memberikan persetujuan secara eksplisit untuk pemrosesan data untuk tujuan tertentu, seperti pengiriman materi pemasaran</li>
+        <li><strong>Pelaksanaan Kontrak:</strong> Pemrosesan diperlukan untuk memenuhi perjanjian jual-beli antara Anda dan PT Hana Digital Media</li>
+        <li><strong>Kewajiban Hukum:</strong> Pemrosesan diwajibkan oleh peraturan perundang-undangan yang berlaku</li>
+        <li><strong>Kepentingan Sah:</strong> Pemrosesan diperlukan untuk kepentingan bisnis yang sah, seperti pencegahan penipuan dan peningkatan keamanan layanan, sepanjang tidak merugikan hak dan kebebasan Anda</li>
+      </ul>
+    </div>
+
+    <div class="legal-section" id="s5">
+      <div class="section-num">Pasal 05</div>
+      <h2>Berbagi Data dengan Pihak Ketiga</h2>
+      <p>PT Hana Digital Media tidak menjual, menyewakan, atau memperdagangkan data pribadi Anda kepada pihak ketiga untuk tujuan komersial mereka. Kami hanya membagikan data dalam kondisi berikut:</p>
+
+      <h3>5.1 Mitra Bisnis Terverifikasi</h3>
+      <ul>
+        <li><strong>Jasa Pengiriman:</strong> JNE, J&T, SiCepat, Anteraja, dan kurir lain yang diperlukan untuk memproses pengiriman</li>
+        <li><strong>Payment Gateway:</strong> Midtrans, Xendit, atau penyedia pembayaran lain untuk memproses transaksi</li>
+        <li><strong>Marketplace:</strong> Shopee dan TikTok Shop sesuai syarat dan ketentuan platform masing-masing</li>
+        <li><strong>Layanan Cloud:</strong> Penyedia infrastruktur teknologi yang telah menandatangani perjanjian kerahasiaan data</li>
+      </ul>
+
+      <h3>5.2 Platform Pemasaran Digital</h3>
+      <ul>
+        <li>Google LLC (Google Ads, Google Analytics) — untuk analitik dan penayangan iklan</li>
+        <li>Meta Platforms (Facebook, Instagram) — untuk kampanye iklan bertarget</li>
+        <li>TikTok For Business — untuk iklan dan promosi di platform TikTok</li>
+      </ul>
+      <p>Seluruh platform di atas memiliki kebijakan privasi independen mereka sendiri.</p>
+
+      <h3>5.3 Kewajiban Hukum</h3>
+      <p>Kami dapat mengungkapkan data Anda kepada otoritas pemerintah, pengadilan, atau lembaga penegak hukum apabila diwajibkan oleh hukum yang berlaku di Indonesia.</p>
+
+      <div class="highlight-box">
+        <p>Semua mitra pihak ketiga yang menerima data Anda terikat oleh perjanjian pemrosesan data dan diwajibkan untuk melindungi informasi Anda sesuai standar keamanan yang berlaku.</p>
+      </div>
+    </div>
+
+    <div class="legal-section" id="s6">
+      <div class="section-num">Pasal 06</div>
+      <h2>Keamanan Data</h2>
+      <p>Kami menerapkan langkah-langkah teknis dan organisasional yang memadai untuk melindungi data pribadi Anda dari akses tidak sah, pengungkapan, perubahan, atau penghancuran, meliputi:</p>
+      <ul>
+        <li><strong>Enkripsi SSL/TLS</strong> pada seluruh transmisi data antara perangkat Anda dan server kami</li>
+        <li><strong>Enkripsi data at-rest</strong> untuk informasi sensitif yang tersimpan di server kami</li>
+        <li><strong>Kontrol akses berbasis peran</strong> — hanya personel yang berwenang yang dapat mengakses data tertentu</li>
+        <li><strong>Pemantauan keamanan 24/7</strong> untuk mendeteksi aktivitas mencurigakan atau ancaman siber</li>
+        <li><strong>Audit keamanan berkala</strong> dan uji penetrasi oleh tim internal dan pihak ketiga independen</li>
+        <li><strong>Pelatihan privasi data</strong> rutin bagi seluruh karyawan yang menangani data pelanggan</li>
+      </ul>
+      <p>Meskipun kami berupaya keras menjaga keamanan data Anda, tidak ada sistem yang sepenuhnya kebal dari risiko. Apabila terjadi pelanggaran data yang berdampak pada data Anda, kami akan memberitahu Anda dalam waktu 14 hari kerja sesuai ketentuan UU PDP.</p>
+    </div>
+
+    <div class="legal-section" id="s7">
+      <div class="section-num">Pasal 07</div>
+      <h2>Penyimpanan & Retensi Data</h2>
+      <p>Kami menyimpan data pribadi Anda selama diperlukan untuk memenuhi tujuan yang dijelaskan dalam kebijakan ini, atau selama diwajibkan oleh hukum yang berlaku:</p>
+      <ul>
+        <li><strong>Data akun aktif:</strong> Selama akun Anda aktif dan periode tambahan 5 tahun setelah penutupan akun</li>
+        <li><strong>Data transaksi:</strong> Minimum 10 tahun sesuai ketentuan perpajakan Indonesia</li>
+        <li><strong>Data komunikasi/layanan pelanggan:</strong> 3 tahun sejak interaksi terakhir</li>
+        <li><strong>Data pemasaran:</strong> Hingga Anda mencabut persetujuan, setelah itu data dihapus dalam 30 hari</li>
+        <li><strong>Data analitik anonim:</strong> Dapat disimpan tanpa batas waktu karena tidak dapat diidentifikasi ke individu tertentu</li>
+      </ul>
+      <p>Setelah masa retensi berakhir, data Anda akan dihapus secara permanen atau dianonimkan dari seluruh sistem kami.</p>
+    </div>
+
+    <div class="legal-section" id="s8">
+      <div class="section-num">Pasal 08</div>
+      <h2>Hak-Hak Anda atas Data Pribadi</h2>
+      <p>Sebagai subjek data, Anda memiliki hak-hak berikut sesuai UU PDP No. 27 Tahun 2022:</p>
+      <ul>
+        <li><strong>Hak Akses:</strong> Meminta salinan data pribadi Anda yang kami simpan</li>
+        <li><strong>Hak Koreksi:</strong> Meminta perbaikan data yang tidak akurat atau tidak lengkap</li>
+        <li><strong>Hak Penghapusan:</strong> Meminta penghapusan data pribadi Anda ("hak untuk dilupakan"), kecuali jika kami memiliki kewajiban hukum untuk menyimpannya</li>
+        <li><strong>Hak Pembatasan:</strong> Meminta pembatasan pemrosesan data Anda dalam kondisi tertentu</li>
+        <li><strong>Hak Portabilitas:</strong> Menerima data Anda dalam format yang terstruktur dan dapat dibaca mesin</li>
+        <li><strong>Hak Keberatan:</strong> Menolak pemrosesan data Anda untuk tujuan pemasaran langsung kapan saja</li>
+        <li><strong>Hak Pencabutan Persetujuan:</strong> Menarik persetujuan yang pernah diberikan tanpa mempengaruhi keabsahan pemrosesan sebelumnya</li>
+      </ul>
+      <p>Untuk menggunakan hak-hak Anda, silakan hubungi kami melalui email <a href="mailto:adisuhendraspd@gmail.com" style="color:var(--coral);">adisuhendraspd@gmail.com</a> atau WhatsApp <a href="https://wa.me/6281958718474" style="color:var(--coral);">+62 819-5871-8474</a>. Kami akan merespons permintaan Anda dalam waktu 14 hari kerja.</p>
+    </div>
+
+    <div class="legal-section" id="s9">
+      <div class="section-num">Pasal 09</div>
+      <h2>Cookie & Teknologi Pelacakan</h2>
+      <p>Website kami menggunakan cookie dan teknologi serupa untuk meningkatkan pengalaman berbelanja Anda. Cookie adalah file teks kecil yang disimpan di perangkat Anda.</p>
+
+      <h3>Jenis Cookie yang Kami Gunakan</h3>
+      <ul>
+        <li><strong>Cookie Esensial:</strong> Diperlukan agar website berfungsi dengan benar (login, keranjang belanja, keamanan). Cookie ini tidak dapat dinonaktifkan.</li>
+        <li><strong>Cookie Analitik:</strong> Membantu kami memahami bagaimana pengunjung berinteraksi dengan website (Google Analytics).</li>
+        <li><strong>Cookie Pemasaran:</strong> Digunakan untuk menampilkan iklan yang relevan di platform lain (Google Ads, Meta Pixel, TikTok Pixel).</li>
+        <li><strong>Cookie Preferensi:</strong> Mengingat pengaturan Anda seperti bahasa dan wilayah pengiriman.</li>
+      </ul>
+      <p>Anda dapat mengelola atau menonaktifkan cookie non-esensial melalui pengaturan browser Anda. Namun, menonaktifkan cookie tertentu dapat mempengaruhi fungsionalitas website.</p>
+    </div>
+
+    <div class="legal-section" id="s10">
+      <div class="section-num">Pasal 10</div>
+      <h2>Perlindungan Data Anak-Anak</h2>
+      <p>Layanan PT Hana Digital Media tidak ditujukan untuk anak-anak di bawah usia 18 tahun. Kami tidak secara sengaja mengumpulkan data pribadi dari anak-anak di bawah 18 tahun tanpa persetujuan orang tua atau wali yang sah.</p>
+      <p>Apabila Anda mengetahui bahwa anak di bawah umur telah memberikan data pribadi kepada kami tanpa izin orang tua, segera hubungi kami agar kami dapat menghapus data tersebut dari sistem kami.</p>
+    </div>
+
+    <div class="legal-section" id="s11">
+      <div class="section-num">Pasal 11</div>
+      <h2>Perubahan Kebijakan Privasi</h2>
+      <p>Kami berhak memperbarui Kebijakan Privasi ini sewaktu-waktu untuk mencerminkan perubahan praktik bisnis, teknologi, atau peraturan hukum yang berlaku.</p>
+      <p>Setiap perubahan material akan diberitahukan kepada Anda melalui:</p>
+      <ul>
+        <li>Notifikasi email ke alamat yang terdaftar di akun Anda</li>
+        <li>Pengumuman di website resmi kami</li>
+        <li>Banner pemberitahuan saat Anda mengakses platform kami</li>
+      </ul>
+      <p>Kebijakan yang diperbarui akan berlaku sejak tanggal yang tercantum di bagian atas halaman ini. Penggunaan layanan kami setelah tanggal tersebut dianggap sebagai persetujuan Anda terhadap perubahan kebijakan.</p>
+    </div>
+
+    <div class="legal-section" id="s12">
+      <div class="section-num">Pasal 12</div>
+      <h2>Hubungi Kami</h2>
+      <p>Apabila Anda memiliki pertanyaan, kekhawatiran, atau permintaan terkait Kebijakan Privasi ini atau pengelolaan data pribadi Anda, silakan hubungi kami melalui:</p>
+      <ul>
+        <li><strong>Email:</strong> <a href="mailto:adisuhendraspd@gmail.com" style="color:var(--coral);">adisuhendraspd@gmail.com</a></li>
+        <li><strong>WhatsApp:</strong> <a href="https://wa.me/6281958718474" style="color:var(--coral);">+62 819-5871-8474</a></li>
+        <li><strong>Telepon:</strong> +62 819-5871-8474</li>
+        <li><strong>Alamat:</strong> Perumahan Palem Ganda Asri, Jl. Kijang Raya A2/20, Kel. Meruyung, Kec. Limo, Kota Depok, Jawa Barat 16514</li>
+        <li><strong>Jam Layanan:</strong> Senin – Sabtu, 08.00 – 17.00 WIB</li>
+      </ul>
+      <div class="highlight-box">
+        <p>Kami berkomitmen untuk merespons setiap pertanyaan atau permintaan terkait privasi dalam waktu maksimal 14 hari kerja sejak diterimanya komunikasi Anda.</p>
+      </div>
+    </div>
+
+  </article>
+</div>
+
+<!-- ══ FOOTER ══ -->
+<footer>
+  <div class="footer-main">
+    <div class="footer-brand">
+      <a href="index.html" class="logo-wrap" style="margin-bottom:.5rem;display:inline-flex;">
+        <div class="logo-icon">H</div>
+        <div class="logo-text">Hana Digital Media<small>PT Hana Digital Media</small></div>
+      </a>
+      <p>Platform e-commerce terpercaya untuk produk kebutuhan rumah tangga, fashion, dan lifestyle. Berkantor pusat di Depok, melayani seluruh Indonesia.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Perusahaan</h4>
+      <ul>
+        <li><a href="index.html#tentang">Tentang Kami</a></li>
+        <li><a href="index.html#kategori">Kategori Produk</a></li>
+        <li><a href="index.html#platform">Platform</a></li>
+        <li><a href="index.html#google-ads">Iklan Digital</a></li>
+        <li><a href="index.html#kontak">Hubungi Kami</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Bantuan</h4>
+      <ul>
+        <li><a href="#">Cara Berbelanja</a></li>
+        <li><a href="#">Info Pengiriman</a></li>
+        <li><a href="#">Kebijakan Retur</a></li>
+        <li><a href="#">Metode Pembayaran</a></li>
+        <li><a href="#">FAQ</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Legal</h4>
+      <ul>
+        <li><a href="privacy-policy.html">Kebijakan Privasi</a></li>
+        <li><a href="disclaimer.html">Disclaimer</a></li>
+        <li><a href="#">Kebijakan Cookie</a></li>
+        <li><a href="#">Kepatuhan Iklan</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2026 PT Hana Digital Media. Semua hak dilindungi undang-undang.</p>
+    <div class="footer-legal">
+      <a href="privacy-policy.html">Kebijakan Privasi</a>
+      <a href="disclaimer.html">Disclaimer</a>
+      <a href="#">Peta Situs</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const nav = document.getElementById('nav');
+  addEventListener('scroll', () => nav.classList.toggle('scrolled', scrollY > 50));
+
+  // Highlight active TOC item on scroll
+  const sections = document.querySelectorAll('.legal-section');
+  const tocLinks = document.querySelectorAll('.toc a');
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        tocLinks.forEach(l => l.classList.remove('active'));
+        const active = document.querySelector(`.toc a[href="#${e.target.id}"]`);
+        if (active) active.classList.add('active');
+      }
+    });
+  }, { threshold: 0.4 });
+  sections.forEach(s => observer.observe(s));
+</script>
+</body>
+</html>

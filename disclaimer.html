@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Disclaimer PT Hana Digital Media — Batasan tanggung jawab, ketentuan penggunaan, dan pernyataan hukum platform e-commerce." />
+  <meta name="author" content="PT Hana Digital Media" />
+  <meta name="robots" content="index, follow" />
+  <title>Disclaimer | PT Hana Digital Media</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --coral:   #E8614A;
+      --coral-d: #C94A35;
+      --blush:   #F9EDE8;
+      --sand:    #F5F0EA;
+      --cream:   #FDFAF7;
+      --charcoal:#1C1C1E;
+      --dark:    #2C2C2E;
+      --muted:   #6E6E73;
+      --border:  rgba(28,28,30,0.10);
+      --green:   #2E7D52;
+      --ff-head: 'Playfair Display', Georgia, serif;
+      --ff-body: 'Plus Jakarta Sans', sans-serif;
+      --shadow:  0 4px 24px rgba(28,28,30,.08);
+      --shadow-lg: 0 16px 48px rgba(28,28,30,.12);
+    }
+
+    html { scroll-behavior: smooth; }
+    body { font-family: var(--ff-body); color: var(--charcoal); background: var(--cream); overflow-x: hidden; }
+
+    /* ───── NAV ───── */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 200;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 1rem 5%;
+      background: rgba(253,250,247,.95);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--border);
+      transition: box-shadow .3s;
+    }
+    nav.scrolled { box-shadow: 0 2px 20px rgba(28,28,30,.08); }
+    .logo-wrap { display: flex; align-items: center; gap: .65rem; text-decoration: none; }
+    .logo-icon {
+      width: 38px; height: 38px;
+      background: linear-gradient(135deg, #E8614A 0%, #C94A35 100%);
+      border-radius: 10px;
+      display: flex; align-items: center; justify-content: center;
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 1.45rem; font-weight: 700; font-style: italic;
+      color: #fff; letter-spacing: -.03em; line-height: 1; flex-shrink: 0;
+      box-shadow: 0 2px 12px rgba(232,97,74,.45), inset 0 1px 0 rgba(255,255,255,.18);
+      text-shadow: 0 1px 4px rgba(0,0,0,.18);
+    }
+    .logo-text { font-family: var(--ff-head); font-size: 1.2rem; font-weight: 700; color: var(--charcoal); line-height: 1; }
+    .logo-text small { display: block; font-family: var(--ff-body); font-size: .6rem; font-weight: 500; color: var(--muted); letter-spacing: .12em; text-transform: uppercase; margin-top: 2px; font-style: normal; }
+    .nav-links { display: flex; gap: 2.2rem; list-style: none; }
+    .nav-links a { text-decoration: none; font-size: .875rem; font-weight: 500; color: var(--dark); transition: color .2s; }
+    .nav-links a:hover { color: var(--coral); }
+    .nav-cta {
+      background: var(--coral); color: #fff !important;
+      padding: .5rem 1.3rem; border-radius: 6px;
+      transition: background .2s, transform .15s !important;
+    }
+    .nav-cta:hover { background: var(--coral-d) !important; transform: translateY(-1px) !important; }
+    .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 4px; }
+    .hamburger span { width: 22px; height: 2px; background: var(--charcoal); border-radius: 2px; transition: all .3s; }
+
+    /* ───── PAGE HERO ───── */
+    .page-hero {
+      padding: 9rem 5% 4rem;
+      background: var(--sand);
+      border-bottom: 1px solid var(--border);
+    }
+    .page-hero .breadcrumb {
+      font-size: .78rem; color: var(--muted); margin-bottom: 1rem;
+    }
+    .page-hero .breadcrumb a { color: var(--coral); text-decoration: none; }
+    .page-hero .breadcrumb a:hover { text-decoration: underline; }
+    .page-hero h1 {
+      font-family: var(--ff-head); font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 700; color: var(--charcoal); line-height: 1.2;
+      letter-spacing: -.02em; margin-bottom: .8rem;
+    }
+    .page-hero p { font-size: .95rem; color: var(--muted); line-height: 1.7; max-width: 600px; }
+    .page-meta {
+      display: flex; gap: 2rem; margin-top: 1.5rem; flex-wrap: wrap;
+    }
+    .page-meta span { font-size: .8rem; color: var(--muted); }
+    .page-meta strong { color: var(--charcoal); }
+
+    /* ───── CONTENT LAYOUT ───── */
+    .content-wrap {
+      display: grid; grid-template-columns: 260px 1fr;
+      gap: 4rem; padding: 4rem 5%; max-width: 1200px; margin: 0 auto;
+    }
+
+    /* Sticky TOC sidebar */
+    .toc {
+      position: sticky; top: 100px; height: fit-content;
+    }
+    .toc h3 {
+      font-size: .7rem; font-weight: 700; text-transform: uppercase;
+      letter-spacing: .14em; color: var(--muted); margin-bottom: 1rem;
+    }
+    .toc ul { list-style: none; }
+    .toc ul li { margin-bottom: .2rem; }
+    .toc ul li a {
+      font-size: .83rem; color: var(--muted); text-decoration: none;
+      padding: .35rem .8rem; border-radius: 6px; display: block;
+      transition: all .2s; border-left: 2px solid transparent;
+    }
+    .toc ul li a:hover { color: var(--coral); background: var(--blush); border-left-color: var(--coral); }
+    .toc ul li a.active { color: var(--coral); background: var(--blush); border-left-color: var(--coral); font-weight: 600; }
+
+    /* Main article */
+    .legal-content { min-width: 0; }
+    .legal-section {
+      margin-bottom: 3rem;
+      padding-bottom: 3rem;
+      border-bottom: 1px solid var(--border);
+    }
+    .legal-section:last-child { border-bottom: none; margin-bottom: 0; }
+    .section-num {
+      font-size: .7rem; font-weight: 700; text-transform: uppercase;
+      letter-spacing: .14em; color: var(--coral); margin-bottom: .5rem;
+      display: flex; align-items: center; gap: .5rem;
+    }
+    .section-num::before { content: ''; width: 20px; height: 2px; background: var(--coral); border-radius: 2px; }
+    .legal-section h2 {
+      font-family: var(--ff-head); font-size: 1.5rem; font-weight: 700;
+      color: var(--charcoal); margin-bottom: 1.2rem; line-height: 1.3;
+    }
+    .legal-section p {
+      font-size: .92rem; color: var(--dark); line-height: 1.85;
+      margin-bottom: 1rem;
+    }
+    .legal-section p:last-child { margin-bottom: 0; }
+    .legal-section ul, .legal-section ol {
+      padding-left: 1.5rem; margin: .8rem 0 1rem;
+    }
+    .legal-section li {
+      font-size: .92rem; color: var(--dark); line-height: 1.75;
+      margin-bottom: .4rem;
+    }
+    .legal-section h3 {
+      font-size: 1rem; font-weight: 700; color: var(--charcoal);
+      margin: 1.5rem 0 .6rem;
+    }
+    .highlight-box {
+      background: var(--blush); border-left: 3px solid var(--coral);
+      border-radius: 0 10px 10px 0; padding: 1.2rem 1.4rem;
+      margin: 1.2rem 0;
+    }
+    .highlight-box p { margin-bottom: 0; font-size: .88rem; color: var(--dark); }
+    .warning-box {
+      background: #FFF8E8; border-left: 3px solid #F5A623;
+      border-radius: 0 10px 10px 0; padding: 1.2rem 1.4rem;
+      margin: 1.2rem 0;
+    }
+    .warning-box p { margin-bottom: 0; font-size: .88rem; color: var(--dark); }
+
+    /* ───── FOOTER ───── */
+    footer { background: #F5F5F5; padding: 3.5rem 5% 2rem; }
+    .footer-main { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 3rem; margin-bottom: 3rem; }
+    .footer-brand p { font-size: .85rem; color: var(--muted); line-height: 1.75; margin-top: .9rem; max-width: 280px; }
+    .footer-col h4 { font-size: .8rem; font-weight: 700; text-transform: uppercase; letter-spacing: .12em; color: var(--muted); margin-bottom: 1rem; }
+    .footer-col ul { list-style: none; }
+    .footer-col ul li { margin-bottom: .6rem; }
+    .footer-col ul li a { color: var(--muted); text-decoration: none; font-size: .85rem; transition: color .2s; }
+    .footer-col ul li a:hover { color: var(--charcoal); }
+    .footer-bottom { border-top: 1px solid rgba(28,28,30,.1); padding-top: 1.5rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; }
+    .footer-bottom p { font-size: .78rem; color: var(--muted); }
+    .footer-legal { display: flex; gap: 2rem; }
+    .footer-legal a { font-size: .78rem; color: var(--muted); text-decoration: none; transition: color .2s; }
+    .footer-legal a:hover { color: var(--charcoal); }
+
+    /* ───── RESPONSIVE ───── */
+    @media (max-width: 900px) {
+      .content-wrap { grid-template-columns: 1fr; gap: 2rem; }
+      .toc { position: static; background: var(--sand); border-radius: 12px; padding: 1.2rem; }
+      .footer-main { grid-template-columns: 1fr 1fr; }
+      .nav-links { display: none; }
+      .hamburger { display: flex; }
+    }
+    @media (max-width: 600px) {
+      .footer-main { grid-template-columns: 1fr; gap: 2rem; }
+      .footer-bottom { flex-direction: column; text-align: center; }
+      .page-meta { flex-direction: column; gap: .5rem; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ══ NAV ══ -->
+<nav id="nav">
+  <a href="index.html" class="logo-wrap">
+    <div class="logo-icon">H</div>
+    <div class="logo-text">Hana Digital Media<small>PT Hana Digital Media</small></div>
+  </a>
+  <ul class="nav-links">
+    <li><a href="index.html#tentang">Tentang</a></li>
+    <li><a href="index.html#kategori">Kategori</a></li>
+    <li><a href="index.html#platform">Platform</a></li>
+    <li><a href="index.html#google-ads">Iklan Digital</a></li>
+    <li><a href="index.html#kontak" class="nav-cta">Hubungi Kami</a></li>
+  </ul>
+  <div class="hamburger" onclick="this.parentElement.querySelector('.nav-links').style.display='flex'">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+<!-- ══ PAGE HERO ══ -->
+<div class="page-hero">
+  <div class="breadcrumb"><a href="index.html">Beranda</a> › Disclaimer</div>
+  <h1>Disclaimer</h1>
+  <p>Halaman ini memuat pernyataan pembatasan tanggung jawab PT Hana Digital Media atas penggunaan platform, informasi produk, iklan digital, dan layanan yang kami sediakan. Harap baca dengan seksama sebelum menggunakan layanan kami.</p>
+  <div class="page-meta">
+    <span><strong>Berlaku sejak:</strong> 1 Januari 2026</span>
+    <span><strong>Terakhir diperbarui:</strong> 1 April 2026</span>
+    <span><strong>Versi:</strong> 2.0</span>
+  </div>
+</div>
+
+<!-- ══ CONTENT ══ -->
+<div class="content-wrap">
+
+  <!-- Sidebar TOC -->
+  <aside class="toc">
+    <h3>Daftar Isi</h3>
+    <ul>
+      <li><a href="#d1">1. Pernyataan Umum</a></li>
+      <li><a href="#d2">2. Akurasi Informasi Produk</a></li>
+      <li><a href="#d3">3. Harga & Ketersediaan</a></li>
+      <li><a href="#d4">4. Iklan & Pemasaran Digital</a></li>
+      <li><a href="#d5">5. Tautan Pihak Ketiga</a></li>
+      <li><a href="#d6">6. Batasan Tanggung Jawab</a></li>
+      <li><a href="#d7">7. Garansi & Jaminan</a></li>
+      <li><a href="#d8">8. Penggunaan Platform</a></li>
+      <li><a href="#d9">9. Hak Kekayaan Intelektual</a></li>
+      <li><a href="#d10">10. Force Majeure</a></li>
+      <li><a href="#d11">11. Hukum yang Berlaku</a></li>
+      <li><a href="#d12">12. Hubungi Kami</a></li>
+    </ul>
+  </aside>
+
+  <!-- Main Content -->
+  <article class="legal-content">
+
+    <div class="legal-section" id="d1">
+      <div class="section-num">Pasal 01</div>
+      <h2>Pernyataan Umum</h2>
+      <p>PT Hana Digital Media ("Perusahaan", "kami") adalah perusahaan e-commerce yang berkantor pusat di Perumahan Palem Ganda Asri, Jl. Kijang Raya A2/20, Kel. Meruyung, Kec. Limo, Kota Depok, Jawa Barat 16514, Indonesia.</p>
+      <p>Disclaimer ini berlaku untuk seluruh platform digital PT Hana Digital Media, mencakup website resmi, toko di marketplace Shopee dan TikTok Shop, akun media sosial resmi (Instagram, Facebook, TikTok), serta seluruh materi pemasaran dan iklan digital yang kami publikasikan.</p>
+      <p>Dengan mengakses dan menggunakan platform kami, Anda dianggap telah membaca, memahami, dan menyetujui seluruh ketentuan yang tercantum dalam Disclaimer ini. Jika Anda tidak menyetujui pernyataan ini, mohon hentikan penggunaan layanan kami.</p>
+      <div class="warning-box">
+        <p><strong>Penting:</strong> Disclaimer ini merupakan bagian tidak terpisahkan dari Syarat & Ketentuan dan Kebijakan Privasi PT Hana Digital Media. Ketiga dokumen ini harus dibaca secara bersamaan sebagai satu kesatuan.</p>
+      </div>
+    </div>
+
+    <div class="legal-section" id="d2">
+      <div class="section-num">Pasal 02</div>
+      <h2>Akurasi Informasi Produk</h2>
+      <p>PT Hana Digital Media berupaya menyajikan informasi produk yang akurat, lengkap, dan terkini di seluruh platform kami. Namun demikian, kami tidak dapat menjamin bahwa seluruh deskripsi produk, spesifikasi teknis, foto, video, ulasan, maupun informasi lainnya yang tersedia di platform kami sepenuhnya bebas dari kesalahan.</p>
+
+      <h3>Potensi Ketidakakuratan</h3>
+      <ul>
+        <li>Warna produk yang ditampilkan di layar perangkat Anda dapat berbeda dari warna produk aktual karena perbedaan pengaturan layar dan kalibrasi monitor</li>
+        <li>Dimensi, berat, dan ukuran produk merupakan perkiraan dan dapat sedikit berbeda dari produk aktual</li>
+        <li>Informasi kandungan, bahan, atau material produk diambil dari keterangan supplier dan dapat berubah tanpa pemberitahuan</li>
+        <li>Foto produk bersifat ilustratif dan aksesoris atau perlengkapan tambahan yang terlihat dalam foto mungkin tidak termasuk dalam produk yang dijual</li>
+      </ul>
+
+      <p>Apabila Anda menemukan ketidakakuratan informasi produk, kami mengundang Anda untuk segera menghubungi tim layanan pelanggan kami sehingga dapat segera kami perbaiki.</p>
+    </div>
+
+    <div class="legal-section" id="d3">
+      <div class="section-num">Pasal 03</div>
+      <h2>Harga & Ketersediaan Produk</h2>
+      <p>Seluruh harga yang tercantum di platform PT Hana Digital Media dinyatakan dalam Rupiah Indonesia (IDR) dan sudah termasuk PPN apabila berlaku, kecuali dinyatakan lain.</p>
+
+      <h3>Ketentuan Harga</h3>
+      <ul>
+        <li>Harga dapat berubah sewaktu-waktu tanpa pemberitahuan sebelumnya, mengikuti kondisi pasar, perubahan biaya dari supplier, atau kebijakan promosi perusahaan</li>
+        <li>Harga yang berlaku adalah harga yang tertera saat Anda melakukan konfirmasi pesanan dan pembayaran</li>
+        <li>Kami berhak membatalkan pesanan yang telah dikonfirmasi apabila terdapat kesalahan harga akibat kesalahan teknis sistem, dan akan mengembalikan dana pembayaran secara penuh</li>
+        <li>Harga promosi, flash sale, dan diskon memiliki masa berlaku terbatas sesuai ketentuan masing-masing kampanye</li>
+      </ul>
+
+      <h3>Ketersediaan Stok</h3>
+      <ul>
+        <li>Ketersediaan stok produk bersifat real-time dan dapat berubah setiap saat</li>
+        <li>Penampilan produk di platform tidak menjamin ketersediaan stok pada saat pemesanan</li>
+        <li>Apabila produk yang dipesan habis setelah pembayaran dikonfirmasi, kami akan menghubungi Anda untuk menawarkan alternatif atau pengembalian dana penuh</li>
+      </ul>
+
+      <div class="highlight-box">
+        <p>Ongkos kirim tidak termasuk dalam harga produk dan akan dihitung secara terpisah berdasarkan berat, dimensi, dan lokasi pengiriman Anda.</p>
+      </div>
+    </div>
+
+    <div class="legal-section" id="d4">
+      <div class="section-num">Pasal 04</div>
+      <h2>Iklan & Pemasaran Digital</h2>
+      <p>PT Hana Digital Media menjalankan kampanye iklan digital di berbagai platform termasuk Google Ads, Meta Ads (Facebook & Instagram), TikTok Ads, Shopee Ads, dan TikTok Shop Ads. Berikut adalah pernyataan penting terkait aktivitas periklanan kami:</p>
+
+      <h3>4.1 Kepatuhan Iklan</h3>
+      <ul>
+        <li>Seluruh kampanye iklan dijalankan sesuai dengan kebijakan iklan masing-masing platform dan peraturan periklanan yang berlaku di Indonesia</li>
+        <li>Kami tidak menggunakan taktik iklan yang menyesatkan, manipulatif, atau melanggar etika periklanan</li>
+        <li>Klaim dan pernyataan dalam materi iklan kami didasarkan pada fakta yang dapat diverifikasi</li>
+        <li>Iklan kami tidak menargetkan anak-anak di bawah usia 18 tahun untuk produk yang tidak sesuai</li>
+      </ul>
+
+      <h3>4.2 Konten Iklan Pihak Ketiga</h3>
+      <ul>
+        <li>Platform kami mungkin menampilkan iklan dari pihak ketiga yang dikelola oleh Google AdSense atau jaringan iklan lainnya</li>
+        <li>PT Hana Digital Media tidak bertanggung jawab atas konten, akurasi, atau praktik privasi iklan pihak ketiga tersebut</li>
+        <li>Penampilan iklan pihak ketiga bukan merupakan dukungan atau rekomendasi dari PT Hana Digital Media</li>
+      </ul>
+
+      <h3>4.3 Testimoni & Ulasan</h3>
+      <ul>
+        <li>Testimoni pelanggan yang ditampilkan merupakan pengalaman nyata dari pelanggan aktual kami</li>
+        <li>Hasil yang dialami setiap pelanggan dapat berbeda-beda tergantung kondisi individual</li>
+        <li>Kami tidak memanipulasi, membeli, atau memalsukan ulasan dan testimoni produk</li>
+      </ul>
+    </div>
+
+    <div class="legal-section" id="d5">
+      <div class="section-num">Pasal 05</div>
+      <h2>Tautan ke Website Pihak Ketiga</h2>
+      <p>Platform PT Hana Digital Media dapat memuat tautan (link) ke website, platform marketplace, atau layanan pihak ketiga, termasuk namun tidak terbatas pada Shopee, TikTok, Instagram, Facebook, Google, dan mitra bisnis kami lainnya.</p>
+      <ul>
+        <li>Tautan tersebut disediakan semata-mata untuk kenyamanan Anda dan tidak merupakan dukungan atau afiliasi resmi dengan pihak tersebut</li>
+        <li>PT Hana Digital Media tidak memiliki kendali atas konten, kebijakan privasi, atau praktik website pihak ketiga tersebut</li>
+        <li>Kami tidak bertanggung jawab atas kerugian, kerusakan, atau ketidaknyamanan yang timbul akibat penggunaan website pihak ketiga</li>
+        <li>Setiap transaksi yang dilakukan di platform pihak ketiga tunduk pada syarat dan ketentuan platform masing-masing</li>
+      </ul>
+      <p>Kami menyarankan Anda untuk membaca kebijakan privasi dan syarat penggunaan setiap website pihak ketiga yang Anda kunjungi melalui tautan dari platform kami.</p>
+    </div>
+
+    <div class="legal-section" id="d6">
+      <div class="section-num">Pasal 06</div>
+      <h2>Batasan Tanggung Jawab</h2>
+      <p>Sejauh yang diizinkan oleh hukum yang berlaku di Indonesia, PT Hana Digital Media, direktur, karyawan, mitra, dan afiliasinya tidak bertanggung jawab atas:</p>
+      <ul>
+        <li><strong>Kerugian tidak langsung</strong> atau konsekuensial yang timbul dari penggunaan atau ketidakmampuan menggunakan layanan kami</li>
+        <li><strong>Gangguan layanan</strong> akibat pemeliharaan sistem, gangguan teknis, serangan siber, atau kejadian di luar kendali kami</li>
+        <li><strong>Kerugian akibat keterlambatan pengiriman</strong> yang disebabkan oleh mitra logistik, kondisi cuaca ekstrem, bencana alam, atau keadaan force majeure</li>
+        <li><strong>Kerusakan atau kehilangan produk</strong> selama proses pengiriman yang berada di luar tanggung jawab langsung PT Hana Digital Media</li>
+        <li><strong>Penggunaan produk yang tidak sesuai</strong> dengan petunjuk penggunaan yang tertera di kemasan atau deskripsi produk</li>
+        <li><strong>Reaksi alergi atau efek samping</strong> dari penggunaan produk apabila pelanggan tidak membaca informasi kandungan yang telah kami cantumkan</li>
+        <li><strong>Kerugian akibat akses tidak sah</strong> ke akun Anda yang disebabkan oleh kelalaian Anda dalam menjaga kerahasiaan kata sandi</li>
+      </ul>
+      <div class="warning-box">
+        <p>Total kewajiban PT Hana Digital Media kepada Anda dalam kondisi apapun tidak akan melebihi nilai total pesanan yang bersangkutan atau jumlah yang telah Anda bayarkan kepada kami dalam 30 hari terakhir, mana yang lebih kecil.</p>
+      </div>
+    </div>
+
+    <div class="legal-section" id="d7">
+      <div class="section-num">Pasal 07</div>
+      <h2>Garansi & Jaminan Produk</h2>
+      <p>PT Hana Digital Media berkomitmen menyediakan produk berkualitas dari supplier terpercaya. Namun, perlu dipahami batasan jaminan yang kami berikan:</p>
+
+      <h3>7.1 Garansi Produk Original</h3>
+      <p>Kami menjamin bahwa seluruh produk yang kami jual merupakan produk original (bukan KW/palsu) yang bersumber dari supplier dan distributor resmi. Apabila Anda menerima produk yang terbukti palsu, kami akan memberikan penggantian penuh tanpa biaya tambahan.</p>
+
+      <h3>7.2 Garansi Kesesuaian Produk</h3>
+      <p>Kami menjamin produk yang Anda terima sesuai dengan deskripsi yang tertera di platform kami pada saat pemesanan, dalam batas toleransi yang wajar sebagaimana dijelaskan di Pasal 2.</p>
+
+      <h3>7.3 Batasan Garansi Pabrik</h3>
+      <ul>
+        <li>Garansi pabrik untuk produk elektronik dan peralatan rumah tangga berlaku sesuai ketentuan produsen masing-masing</li>
+        <li>PT Hana Digital Media tidak memberikan garansi pabrik tambahan di luar yang sudah ditetapkan produsen</li>
+        <li>Kerusakan akibat penggunaan yang tidak wajar, modifikasi, atau kecelakaan tidak termasuk dalam cakupan garansi</li>
+      </ul>
+
+      <h3>7.4 Kebijakan Retur & Pengembalian Dana</h3>
+      <p>Produk dapat dikembalikan dalam kondisi tertentu sesuai kebijakan retur yang berlaku. Detail kebijakan retur tersedia di halaman Bantuan kami. Pengembalian dana akan diproses dalam 3–7 hari kerja setelah produk diterima dan diverifikasi oleh tim kami.</p>
+    </div>
+
+    <div class="legal-section" id="d8">
+      <div class="section-num">Pasal 08</div>
+      <h2>Penggunaan Platform yang Diizinkan</h2>
+      <p>Anda setuju untuk menggunakan platform PT Hana Digital Media hanya untuk tujuan yang sah dan sesuai dengan ketentuan berikut. Anda dilarang:</p>
+      <ul>
+        <li>Menggunakan platform untuk tujuan penipuan, penyalahgunaan, atau aktivitas ilegal</li>
+        <li>Melakukan pemesanan fiktif atau palsu yang bertujuan mengganggu operasional kami</li>
+        <li>Mencoba meretas, memodifikasi, atau merusak sistem keamanan platform kami</li>
+        <li>Mengumpulkan data pengguna lain tanpa izin melalui scraping atau metode otomatis lainnya</li>
+        <li>Menyebarkan konten yang mengandung virus, malware, atau kode berbahaya lainnya</li>
+        <li>Membuat ulasan palsu, menyesatkan, atau tidak jujur tentang produk kami maupun produk kompetitor</li>
+        <li>Menggunakan platform untuk tujuan komersial tanpa izin tertulis dari PT Hana Digital Media</li>
+        <li>Menyalin, mendistribusikan, atau mereproduksi konten platform kami tanpa izin</li>
+      </ul>
+      <p>Pelanggaran terhadap ketentuan ini dapat mengakibatkan penangguhan atau penghentian akun Anda, serta tindakan hukum sesuai peraturan yang berlaku.</p>
+    </div>
+
+    <div class="legal-section" id="d9">
+      <div class="section-num">Pasal 09</div>
+      <h2>Hak Kekayaan Intelektual</h2>
+      <p>Seluruh konten yang tersedia di platform PT Hana Digital Media, termasuk namun tidak terbatas pada teks, gambar, foto produk, video, logo, desain grafis, ikon, nama merek, dan kode perangkat lunak, merupakan milik PT Hana Digital Media atau milik pihak ketiga yang telah memberikan lisensi kepada kami.</p>
+      <ul>
+        <li>Konten platform ini dilindungi oleh Undang-Undang No. 28 Tahun 2014 tentang Hak Cipta dan peraturan hak kekayaan intelektual Indonesia lainnya</li>
+        <li>Anda tidak diperkenankan menyalin, mereproduksi, mendistribusikan, atau menggunakan konten kami untuk tujuan komersial tanpa izin tertulis</li>
+        <li>Penggunaan logo, merek dagang, atau nama "Hana Digital Media" atau "PT Hana Digital Media" oleh pihak lain tanpa izin merupakan pelanggaran hukum</li>
+        <li>Foto dan gambar produk dari Unsplash yang digunakan di platform ini tunduk pada lisensi Unsplash masing-masing fotografer</li>
+      </ul>
+      <p>Pelanggaran hak kekayaan intelektual akan ditindaklanjuti melalui jalur hukum yang berlaku.</p>
+    </div>
+
+    <div class="legal-section" id="d10">
+      <div class="section-num">Pasal 10</div>
+      <h2>Force Majeure</h2>
+      <p>PT Hana Digital Media tidak bertanggung jawab atas kegagalan atau keterlambatan dalam memenuhi kewajiban kami yang disebabkan oleh kejadian di luar kendali yang wajar dari perusahaan, termasuk namun tidak terbatas pada:</p>
+      <ul>
+        <li>Bencana alam (gempa bumi, banjir, tsunami, gunung meletus, angin topan)</li>
+        <li>Pandemi, wabah penyakit, atau keadaan darurat kesehatan nasional</li>
+        <li>Perang, kerusuhan sipil, terorisme, atau tindakan pemerintah</li>
+        <li>Pemadaman listrik skala besar atau gangguan infrastruktur internet nasional</li>
+        <li>Serangan siber skala besar (DDoS, ransomware) yang mempengaruhi infrastruktur kami</li>
+        <li>Gangguan pada sistem mitra logistik atau payment gateway yang berada di luar kendali kami</li>
+        <li>Kebijakan atau regulasi pemerintah yang membatasi operasional bisnis kami</li>
+      </ul>
+      <p>Dalam situasi force majeure, kami akan berupaya menginformasikan kondisi tersebut kepada pelanggan sesegera mungkin dan mengambil langkah-langkah yang wajar untuk meminimalkan dampaknya.</p>
+    </div>
+
+    <div class="legal-section" id="d11">
+      <div class="section-num">Pasal 11</div>
+      <h2>Hukum yang Berlaku & Penyelesaian Sengketa</h2>
+      <p>Disclaimer ini, beserta seluruh ketentuan penggunaan layanan PT Hana Digital Media, tunduk pada dan ditafsirkan sesuai dengan hukum Negara Kesatuan Republik Indonesia.</p>
+
+      <h3>11.1 Penyelesaian Melalui Musyawarah</h3>
+      <p>Apabila timbul perselisihan antara Anda dan PT Hana Digital Media, para pihak sepakat untuk terlebih dahulu menyelesaikan perselisihan tersebut secara musyawarah mufakat dalam jangka waktu 30 hari sejak perselisihan disampaikan secara tertulis.</p>
+
+      <h3>11.2 Mediasi & Arbitrase</h3>
+      <p>Apabila penyelesaian musyawarah tidak tercapai, para pihak dapat menempuh jalur mediasi melalui Badan Penyelesaian Sengketa Konsumen (BPSK) atau lembaga mediasi yang disepakati bersama sebelum membawa perselisihan ke pengadilan.</p>
+
+      <h3>11.3 Yurisdiksi Pengadilan</h3>
+      <p>Apabila mediasi tidak berhasil, para pihak sepakat untuk menyelesaikan perselisihan melalui Pengadilan Negeri Depok sebagai pengadilan yang berwenang, tanpa mengesampingkan hak PT Hana Digital Media untuk mengajukan gugatan di pengadilan lain yang berwenang.</p>
+
+      <h3>11.4 Perlindungan Konsumen</h3>
+      <p>Disclaimer ini tidak mengesampingkan hak-hak konsumen yang dilindungi oleh Undang-Undang No. 8 Tahun 1999 tentang Perlindungan Konsumen dan peraturan terkait lainnya yang berlaku di Indonesia.</p>
+    </div>
+
+    <div class="legal-section" id="d12">
+      <div class="section-num">Pasal 12</div>
+      <h2>Hubungi Kami</h2>
+      <p>Apabila Anda memiliki pertanyaan, keberatan, atau memerlukan klarifikasi terkait Disclaimer ini, silakan hubungi kami melalui:</p>
+      <ul>
+        <li><strong>Email:</strong> <a href="mailto:adisuhendraspd@gmail.com" style="color:var(--coral);">adisuhendraspd@gmail.com</a></li>
+        <li><strong>WhatsApp:</strong> <a href="https://wa.me/6281958718474" style="color:var(--coral);">+62 819-5871-8474</a></li>
+        <li><strong>Telepon:</strong> +62 819-5871-8474</li>
+        <li><strong>Alamat:</strong> Perumahan Palem Ganda Asri, Jl. Kijang Raya A2/20, Kel. Meruyung, Kec. Limo, Kota Depok, Jawa Barat 16514</li>
+        <li><strong>Jam Layanan:</strong> Senin – Sabtu, 08.00 – 17.00 WIB</li>
+      </ul>
+      <div class="highlight-box">
+        <p>PT Hana Digital Media berhak memperbarui Disclaimer ini sewaktu-waktu. Perubahan akan berlaku segera setelah dipublikasikan di platform kami. Penggunaan layanan kami setelah perubahan tersebut dianggap sebagai penerimaan Anda terhadap Disclaimer yang telah diperbarui.</p>
+      </div>
+    </div>
+
+  </article>
+</div>
+
+<!-- ══ FOOTER ══ -->
+<footer>
+  <div class="footer-main">
+    <div class="footer-brand">
+      <a href="index.html" class="logo-wrap" style="margin-bottom:.5rem;display:inline-flex;">
+        <div class="logo-icon">H</div>
+        <div class="logo-text">Hana Digital Media<small>PT Hana Digital Media</small></div>
+      </a>
+      <p>Platform e-commerce terpercaya untuk produk kebutuhan rumah tangga, fashion, dan lifestyle. Berkantor pusat di Depok, melayani seluruh Indonesia.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Perusahaan</h4>
+      <ul>
+        <li><a href="index.html#tentang">Tentang Kami</a></li>
+        <li><a href="index.html#kategori">Kategori Produk</a></li>
+        <li><a href="index.html#platform">Platform</a></li>
+        <li><a href="index.html#google-ads">Iklan Digital</a></li>
+        <li><a href="index.html#kontak">Hubungi Kami</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Bantuan</h4>
+      <ul>
+        <li><a href="#">Cara Berbelanja</a></li>
+        <li><a href="#">Info Pengiriman</a></li>
+        <li><a href="#">Kebijakan Retur</a></li>
+        <li><a href="#">Metode Pembayaran</a></li>
+        <li><a href="#">FAQ</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Legal</h4>
+      <ul>
+        <li><a href="privacy-policy.html">Kebijakan Privasi</a></li>
+        <li><a href="disclaimer.html">Disclaimer</a></li>
+        <li><a href="#">Kebijakan Cookie</a></li>
+        <li><a href="#">Kepatuhan Iklan</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2026 PT Hana Digital Media. Semua hak dilindungi undang-undang.</p>
+    <div class="footer-legal">
+      <a href="privacy-policy.html">Kebijakan Privasi</a>
+      <a href="disclaimer.html">Disclaimer</a>
+      <a href="#">Peta Situs</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const nav = document.getElementById('nav');
+  addEventListener('scroll', () => nav.classList.toggle('scrolled', scrollY > 50));
+
+  // Highlight active TOC item on scroll
+  const sections = document.querySelectorAll('.legal-section');
+  const tocLinks = document.querySelectorAll('.toc a');
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        tocLinks.forEach(l => l.classList.remove('active'));
+        const active = document.querySelector(`.toc a[href="#${e.target.id}"]`);
+        if (active) active.classList.add('active');
+      }
+    });
+  }, { threshold: 0.4 });
+  sections.forEach(s => observer.observe(s));
+</script>
+</body>
+</html>

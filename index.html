@@ -3,1187 +3,338 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="PT Hana Digital Media — Platform e-commerce terpercaya untuk produk kebutuhan rumah tangga, fashion, dan lifestyle. Belanja mudah, pengiriman cepat, harga terbaik." />
-  <meta name="keywords" content="e-commerce, rumah tangga, fashion, lifestyle, belanja online, PT Hana Digital Media, toko online Indonesia" />
-  <meta name="author" content="PT Hana Digital Media" />
+  <meta name="description" content="PT Hana Digital Media — Perusahaan e-commerce yang berfokus pada penjualan produk kebutuhan rumah tangga, fashion, dan lifestyle melalui platform digital." />
   <meta name="robots" content="index, follow" />
-  <meta property="og:title" content="PT Hana Digital Media | E-Commerce Rumah Tangga, Fashion & Lifestyle" />
-  <meta property="og:description" content="Temukan ribuan produk kebutuhan rumah tangga, fashion, dan lifestyle terpilih. Belanja nyaman melalui platform digital kami." />
-  <meta property="og:type" content="website" />
-  <title>PT Hana Digital Media | E-Commerce Rumah Tangga, Fashion & Lifestyle</title>
-
+  <title>PT Hana Digital Media</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
-
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
     :root {
-      --coral:   #E8614A;
-      --coral-d: #C94A35;
-      --blush:   #F9EDE8;
-      --sand:    #F5F0EA;
-      --cream:   #FDFAF7;
-      --charcoal:#1C1C1E;
-      --dark:    #2C2C2E;
-      --muted:   #6E6E73;
-      --border:  rgba(28,28,30,0.10);
-      --green:   #2E7D52;
-      --ff-head: 'Playfair Display', Georgia, serif;
-      --ff-body: 'Plus Jakarta Sans', sans-serif;
-      --shadow:  0 4px 24px rgba(28,28,30,.08);
-      --shadow-lg: 0 16px 48px rgba(28,28,30,.12);
+      --bg:     #F8F7F4;
+      --white:  #FFFFFF;
+      --black:  #111111;
+      --dark:   #1C1C1C;
+      --muted:  #777777;
+      --light:  #EFEFEC;
+      --accent: #C8502A;
+      --border: rgba(0,0,0,0.08);
+      --ff-h:   'Syne', sans-serif;
+      --ff-b:   'Inter', sans-serif;
     }
-
     html { scroll-behavior: smooth; }
-    body { font-family: var(--ff-body); color: var(--charcoal); background: var(--cream); overflow-x: hidden; }
+    body { font-family: var(--ff-b); background: var(--bg); color: var(--dark); overflow-x: hidden; }
 
-    /* ───── NAV ───── */
+    /* NAV */
     nav {
-      position: fixed; top: 0; left: 0; right: 0; z-index: 200;
-      display: flex; align-items: center; justify-content: space-between;
-      padding: 1rem 5%;
-      background: rgba(253,250,247,.95);
-      backdrop-filter: blur(16px);
+      position: fixed; top: 0; left: 0; right: 0; z-index: 99;
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 1.2rem 6%;
+      background: rgba(248,247,244,.94);
+      backdrop-filter: blur(12px);
       border-bottom: 1px solid var(--border);
-      transition: box-shadow .3s;
     }
-    nav.scrolled { box-shadow: 0 2px 20px rgba(28,28,30,.08); }
-    .logo-wrap { display: flex; align-items: center; gap: .65rem; text-decoration: none; }
-    .logo-icon {
-      width: 38px; height: 38px;
-      background: linear-gradient(135deg, #E8614A 0%, #C94A35 100%);
-      border-radius: 10px;
-      display: flex; align-items: center; justify-content: center;
-      font-family: 'Playfair Display', Georgia, serif;
-      font-size: 1.45rem;
-      font-weight: 700;
-      font-style: italic;
-      color: #fff;
-      letter-spacing: -.03em;
-      line-height: 1;
-      flex-shrink: 0;
-      box-shadow: 0 2px 12px rgba(232,97,74,.45), inset 0 1px 0 rgba(255,255,255,.18);
-      text-shadow: 0 1px 4px rgba(0,0,0,.18);
-    }
-    .logo-text { font-family: var(--ff-head); font-size: 1.2rem; font-weight: 700; color: var(--charcoal); line-height: 1; }
-    .logo-text small { display: block; font-family: var(--ff-body); font-size: .6rem; font-weight: 500; color: var(--muted); letter-spacing: .12em; text-transform: uppercase; margin-top: 2px; font-style: normal; }
-    .nav-links { display: flex; gap: 2.2rem; list-style: none; }
-    .nav-links a { text-decoration: none; font-size: .875rem; font-weight: 500; color: var(--dark); transition: color .2s; }
-    .nav-links a:hover { color: var(--coral); }
-    .nav-cta {
-      background: var(--coral); color: #fff !important;
-      padding: .5rem 1.3rem; border-radius: 6px;
-      transition: background .2s, transform .15s !important;
-    }
-    .nav-cta:hover { background: var(--coral-d) !important; transform: translateY(-1px) !important; }
-    .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 4px; }
-    .hamburger span { width: 22px; height: 2px; background: var(--charcoal); border-radius: 2px; transition: all .3s; }
+    .logo { font-family: var(--ff-h); font-size: 1.05rem; font-weight: 700; color: var(--black); text-decoration: none; letter-spacing: -.01em; }
+    .nav-r { display: flex; gap: 2rem; list-style: none; align-items: center; }
+    .nav-r a { font-size: .83rem; color: var(--muted); text-decoration: none; transition: color .2s; font-weight: 500; }
+    .nav-r a:hover { color: var(--black); }
+    .nav-r .cta { background: var(--black); color: #fff !important; padding: .45rem 1.1rem; border-radius: 5px; }
+    .nav-r .cta:hover { background: var(--dark); }
 
-    /* ───── HERO ───── */
+    /* HERO */
     .hero {
-      padding: 7.5rem 5% 5rem;
-      display: grid; grid-template-columns: 1fr 1fr;
-      align-items: center; gap: 4rem;
       min-height: 100vh;
-      position: relative;
-    }
-    .hero::after {
-      content: '';
-      position: absolute; top: 0; right: 0; bottom: 0;
-      width: 48%;
-      background: var(--blush);
-      z-index: -1;
-      clip-path: polygon(8% 0, 100% 0, 100% 100%, 0% 100%);
-    }
-    .hero-eyebrow {
-      display: inline-flex; align-items: center; gap: .5rem;
-      font-size: .75rem; font-weight: 600; text-transform: uppercase; letter-spacing: .12em;
-      color: var(--coral); margin-bottom: 1.4rem;
-      animation: slideUp .5s ease both;
-    }
-    .eyebrow-line { width: 28px; height: 2px; background: var(--coral); border-radius: 2px; }
-    .hero h1 {
-      font-family: var(--ff-head);
-      font-size: clamp(2.6rem, 4.5vw, 4rem);
-      font-weight: 700; line-height: 1.15;
-      color: var(--charcoal); letter-spacing: -.02em;
-      margin-bottom: 1.4rem;
-      animation: slideUp .5s .1s ease both;
-    }
-    .hero h1 .accent { color: var(--coral); font-style: italic; }
-    .hero-sub {
-      font-size: 1rem; line-height: 1.8; color: var(--muted);
-      max-width: 460px; margin-bottom: 2.2rem;
-      animation: slideUp .5s .2s ease both;
-    }
-    .hero-btns { display: flex; gap: 1rem; flex-wrap: wrap; animation: slideUp .5s .3s ease both; }
-    .btn-fill {
-      background: var(--coral); color: #fff;
-      padding: .82rem 1.9rem; border-radius: 7px;
-      font-weight: 600; font-size: .93rem;
-      text-decoration: none; transition: background .2s, transform .2s;
-      display: inline-flex; align-items: center; gap: .5rem;
-    }
-    .btn-fill:hover { background: var(--coral-d); transform: translateY(-2px); }
-    .btn-ghost {
-      border: 1.5px solid var(--border); color: var(--dark);
-      padding: .82rem 1.9rem; border-radius: 7px;
-      font-weight: 600; font-size: .93rem;
-      text-decoration: none; transition: all .2s;
-      display: inline-flex; align-items: center; gap: .5rem;
-    }
-    .btn-ghost:hover { border-color: var(--charcoal); background: var(--charcoal); color: #fff; }
-
-    /* Hero product cards */
-    .hero-visual { position: relative; padding: 1.5rem 0 1.5rem 2rem; animation: slideLeft .6s .2s ease both; }
-    .product-showcase {
-      display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;
-    }
-    .p-card {
-      background: #fff;
-      border-radius: 14px;
-      overflow: hidden;
-      box-shadow: var(--shadow);
-      transition: transform .3s, box-shadow .3s;
-      cursor: default;
-    }
-    .p-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-lg); }
-    .p-card:nth-child(2) { margin-top: 2rem; }
-    .p-card:nth-child(3) { margin-top: -2rem; }
-    .p-card-img {
-      aspect-ratio: 1;
-      overflow: hidden;
-    }
-    .p-card-img img { width: 100%; height: 100%; object-fit: cover; display: block; }
-    .p-card-info { padding: .9rem 1rem; }
-    .p-card-cat { font-size: .68rem; font-weight: 600; text-transform: uppercase; letter-spacing: .1em; color: var(--coral); margin-bottom: .2rem; }
-    .p-card-name { font-size: .85rem; font-weight: 600; color: var(--charcoal); }
-    .p-card-price { font-size: .8rem; color: var(--muted); margin-top: .15rem; }
-
-    .hero-trust {
-      display: flex; gap: 2rem; margin-top: 2rem; flex-wrap: wrap;
-      animation: slideUp .5s .4s ease both;
-    }
-    .trust-item { display: flex; align-items: center; gap: .5rem; }
-    .trust-item .t-icon { font-size: 1rem; }
-    .trust-item span { font-size: .8rem; color: var(--muted); font-weight: 500; }
-    .trust-item strong { color: var(--charcoal); }
-
-    /* ───── MARQUEE STRIP ───── */
-    .strip {
-      background: var(--coral); color: #fff;
-      padding: .85rem 0; overflow: hidden;
-      white-space: nowrap;
-    }
-    .strip-track {
-      display: inline-flex; gap: 3rem;
-      animation: marquee 22s linear infinite;
-    }
-    .strip-item { font-size: .82rem; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; display: inline-flex; align-items: center; gap: .7rem; }
-    .strip-item::before { content: '✦'; opacity: .6; }
-    @keyframes marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
-
-    /* ───── SECTION COMMON ───── */
-    section { padding: 6rem 5%; }
-    .s-eyebrow { font-size: .75rem; font-weight: 700; text-transform: uppercase; letter-spacing: .14em; color: var(--coral); margin-bottom: .7rem; display: flex; align-items: center; gap: .5rem; }
-    .s-eyebrow::before { content: ''; width: 20px; height: 2px; background: var(--coral); border-radius: 2px; }
-    .s-title { font-family: var(--ff-head); font-size: clamp(2rem, 3.5vw, 2.8rem); font-weight: 700; color: var(--charcoal); line-height: 1.2; letter-spacing: -.02em; margin-bottom: 1rem; }
-    .s-desc { font-size: .95rem; color: var(--muted); line-height: 1.8; max-width: 520px; }
-    .s-head { display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 3.5rem; gap: 2rem; flex-wrap: wrap; }
-
-    /* ───── ABOUT ───── */
-    .about { background: var(--sand); }
-    .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center; }
-    .about-left { position: relative; }
-    .about-img {
-      border-radius: 20px;
-      aspect-ratio: 5/4;
-      overflow: hidden; position: relative;
-    }
-    .about-img img { width: 100%; height: 100%; object-fit: cover; display: block; }
-    .about-chip {
-      position: absolute; bottom: -1.2rem; right: -1.2rem;
-      background: var(--coral);
-      color: #fff; border-radius: 14px;
-      padding: 1rem 1.4rem;
-      box-shadow: 0 8px 28px rgba(232,97,74,.35);
-      text-align: center;
-    }
-    .about-chip strong { display: block; font-family: var(--ff-head); font-size: 2rem; line-height: 1; }
-    .about-chip span { font-size: .72rem; font-weight: 500; opacity: .9; }
-    .about-right p { font-size: .95rem; color: var(--muted); line-height: 1.85; margin-bottom: 1.2rem; }
-    .about-pillars { display: grid; grid-template-columns: 1fr 1fr; gap: 1.2rem; margin-top: 2rem; }
-    .pillar {
-      background: #fff; border-radius: 12px;
-      padding: 1.3rem 1.4rem;
-      border-left: 3px solid var(--coral);
-    }
-    .pillar strong { display: block; font-size: .9rem; color: var(--charcoal); font-weight: 600; margin-bottom: .3rem; }
-    .pillar span { font-size: .8rem; color: var(--muted); }
-
-    /* ───── CATEGORIES ───── */
-    .categories { background: var(--cream); }
-    .cat-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
-    .cat-card {
-      border-radius: 18px; overflow: hidden;
-      position: relative; cursor: default;
-      transition: transform .3s, box-shadow .3s;
-      aspect-ratio: 4/5;
-      display: flex; flex-direction: column; justify-content: flex-end;
-    }
-    .cat-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-lg); }
-    .cat-bg {
-      position: absolute; inset: 0;
-      overflow: hidden;
-    }
-    .cat-bg img { width: 100%; height: 100%; object-fit: cover; display: block; }
-    .cat-overlay {
-      position: relative; z-index: 1;
-      background: linear-gradient(0deg, rgba(28,28,30,.65) 0%, transparent 100%);
-      padding: 1.8rem;
-    }
-    .cat-tag {
-      display: inline-block;
-      background: rgba(255,255,255,.2);
-      color: #fff; font-size: .7rem; font-weight: 600;
-      letter-spacing: .1em; text-transform: uppercase;
-      padding: .3rem .8rem; border-radius: 100px;
-      margin-bottom: .6rem; backdrop-filter: blur(6px);
-    }
-    .cat-card h3 { color: #fff; font-family: var(--ff-head); font-size: 1.5rem; font-weight: 700; margin-bottom: .3rem; }
-    .cat-card p { color: rgba(255,255,255,.75); font-size: .82rem; line-height: 1.5; }
-    .cat-arrow {
-      display: inline-flex; align-items: center; justify-content: center;
-      width: 32px; height: 32px;
-      background: #fff; border-radius: 50%;
-      color: var(--charcoal); font-size: .9rem;
-      margin-top: .8rem;
-      transition: transform .2s;
-    }
-    .cat-card:hover .cat-arrow { transform: translateX(4px); }
-
-    /* ───── STATS ───── */
-    .stats-band { background: #F5F5F5; padding: 4.5rem 5%; }
-    .stats-inner { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2rem; }
-    .stat-item { text-align: center; }
-    .stat-num {
-      font-family: var(--ff-head);
-      font-size: clamp(2.4rem, 4vw, 3.5rem);
-      font-weight: 700; color: var(--coral);
-      line-height: 1; margin-bottom: .4rem;
-    }
-    .stat-label { font-size: .82rem; color: var(--muted); text-transform: uppercase; letter-spacing: .1em; }
-
-    /* ───── WHY US ───── */
-    .why { background: var(--sand); }
-    .why-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
-    .why-card {
-      background: #fff; border-radius: 16px;
-      padding: 2rem; border: 1px solid var(--border);
-      transition: all .3s;
-    }
-    .why-card:hover { box-shadow: var(--shadow-lg); transform: translateY(-4px); }
-    .why-card-icon {
-      width: 52px; height: 52px;
-      border-radius: 13px;
-      display: flex; align-items: center; justify-content: center;
-      font-size: 1.5rem; margin-bottom: 1.3rem;
-    }
-    .why-card-icon.c1 { background: #FFF0EB; }
-    .why-card-icon.c2 { background: #EBF5FF; }
-    .why-card-icon.c3 { background: #EBF5F0; }
-    .why-card-icon.c4 { background: #FEF3E8; }
-    .why-card-icon.c5 { background: #F3EBFF; }
-    .why-card-icon.c6 { background: #EBFFF5; }
-    .why-card h3 { font-size: 1rem; font-weight: 700; color: var(--charcoal); margin-bottom: .5rem; }
-    .why-card p { font-size: .85rem; color: var(--muted); line-height: 1.7; }
-
-    /* ───── PLATFORMS ───── */
-    .platforms { background: var(--cream); }
-    .platform-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.2rem; }
-    .plat-card {
-      background: #fff; border: 1px solid var(--border);
-      border-radius: 14px; padding: 1.8rem;
-      text-align: center; transition: all .3s;
-    }
-    .plat-card:hover { border-color: var(--coral); box-shadow: 0 8px 28px rgba(232,97,74,.1); }
-    .plat-icon { font-size: 2.2rem; margin-bottom: .8rem; display: block; }
-    .plat-card h4 { font-size: .9rem; font-weight: 700; color: var(--charcoal); margin-bottom: .3rem; }
-    .plat-card p { font-size: .78rem; color: var(--muted); line-height: 1.5; }
-    .plat-badge {
-      display: inline-block;
-      background: var(--blush); color: var(--coral);
-      font-size: .68rem; font-weight: 700; letter-spacing: .06em; text-transform: uppercase;
-      padding: .25rem .7rem; border-radius: 100px; margin-top: .6rem;
-    }
-
-    /* ───── TESTIMONIALS ───── */
-    .testimonials { background: var(--sand); }
-    .testi-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
-    .testi-card {
-      background: #fff; border-radius: 16px;
-      padding: 2rem; border: 1px solid var(--border);
-    }
-    .stars { color: #F5A623; font-size: .85rem; margin-bottom: .8rem; letter-spacing: .05em; }
-    .testi-card blockquote { font-size: .9rem; color: var(--dark); line-height: 1.75; font-style: italic; margin-bottom: 1.4rem; }
-    .testi-author { display: flex; align-items: center; gap: .8rem; }
-    .testi-av {
-      width: 40px; height: 40px; border-radius: 50%;
-      display: flex; align-items: center; justify-content: center;
-      font-size: .85rem; font-weight: 700; color: #fff;
-      flex-shrink: 0;
-    }
-    .testi-author strong { display: block; font-size: .85rem; color: var(--charcoal); }
-    .testi-author span { font-size: .75rem; color: var(--muted); }
-
-    /* ───── DIGITAL MARKETING SECTION ───── */
-    .ads-section { background: var(--cream); }
-
-    .ads-intro { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; margin-bottom: 5rem; }
-    .ads-text p { font-size: .95rem; color: var(--muted); line-height: 1.8; margin-bottom: 1.2rem; }
-    .ads-list { list-style: none; margin: 1.5rem 0; }
-    .ads-list li {
-      display: flex; align-items: flex-start; gap: .8rem;
-      font-size: .9rem; color: var(--dark); margin-bottom: .8rem;
-      line-height: 1.5;
-    }
-    .ads-list li::before { content: '✓'; color: var(--green); font-weight: 700; flex-shrink: 0; margin-top: .05rem; }
-
-    /* Overall metrics bar */
-    .ads-metrics-bar {
-      display: grid; grid-template-columns: repeat(4, 1fr);
-      gap: 1.2rem; margin-bottom: 4rem;
-    }
-    .ads-metric-card {
-      background: #fff; border: 1px solid var(--border);
-      border-radius: 16px; padding: 1.5rem 1.2rem;
-      text-align: center;
-    }
-    .ads-metric-card .metric-val {
-      font-family: var(--ff-head); font-size: 2rem;
-      font-weight: 700; line-height: 1; margin-bottom: .3rem;
-    }
-    .ads-metric-card .metric-val.coral { color: var(--coral); }
-    .ads-metric-card .metric-val.green { color: #2E7D52; }
-    .ads-metric-card .metric-val.blue { color: #1877F2; }
-    .ads-metric-card .metric-val.dark { color: var(--charcoal); }
-    .ads-metric-card .metric-label { font-size: .75rem; color: var(--muted); text-transform: uppercase; letter-spacing: .08em; }
-
-    /* Platform cards grid */
-    .platform-ads-grid {
-      display: grid; grid-template-columns: repeat(3, 1fr);
-      gap: 1.5rem; margin-bottom: 1.5rem;
-    }
-    .platform-ads-grid.two-col {
-      grid-template-columns: repeat(2, 1fr);
-    }
-    .pad-card {
-      background: #fff; border: 1px solid var(--border);
-      border-radius: 20px; padding: 2rem;
-      transition: box-shadow .3s, transform .3s;
+      display: flex; align-items: center;
+      padding: 7rem 6% 5rem;
       position: relative; overflow: hidden;
     }
-    .pad-card:hover { box-shadow: var(--shadow-lg); transform: translateY(-4px); }
-    .pad-card::before {
-      content: ''; position: absolute; top: 0; left: 0; right: 0;
-      height: 3px; border-radius: 20px 20px 0 0;
+    .hero::before {
+      content: '';
+      position: absolute; top: -20%; right: -10%;
+      width: 600px; height: 600px;
+      background: radial-gradient(circle, rgba(200,80,42,.07) 0%, transparent 70%);
+      pointer-events: none;
     }
-    .pad-card.google::before { background: linear-gradient(90deg, #4285F4, #EA4335, #FBBC05, #34A853); }
-    .pad-card.meta::before { background: linear-gradient(90deg, #1877F2, #E1306C); }
-    .pad-card.tiktok::before { background: linear-gradient(90deg, #010101, #EE1D52, #69C9D0); }
-    .pad-card.shopee::before { background: linear-gradient(90deg, #EE4D2D, #FF7337); }
-    .pad-card.tiktokshop::before { background: linear-gradient(90deg, #010101, #EE1D52, #69C9D0); }
+    .hero-inner { max-width: 680px; }
+    .hero-year {
+      display: inline-block;
+      font-size: .72rem; font-weight: 500; letter-spacing: .14em; text-transform: uppercase;
+      color: var(--muted); margin-bottom: 1.8rem;
+      border-bottom: 1px solid var(--border); padding-bottom: .5rem;
+      animation: up .5s ease both;
+    }
+    .hero h1 {
+      font-family: var(--ff-h);
+      font-size: clamp(2.8rem, 6vw, 5.5rem);
+      font-weight: 800; line-height: 1.05;
+      letter-spacing: -.03em; color: var(--black);
+      margin-bottom: 1.6rem;
+      animation: up .5s .08s ease both;
+    }
+    .hero h1 em { font-style: italic; color: var(--accent); }
+    .hero-desc {
+      font-size: 1rem; line-height: 1.85; color: var(--muted);
+      max-width: 480px; margin-bottom: 2.8rem;
+      animation: up .5s .16s ease both;
+    }
+    .hero-cta {
+      display: inline-flex; align-items: center; gap: .5rem;
+      background: var(--black); color: #fff;
+      padding: .82rem 1.8rem; border-radius: 6px;
+      font-size: .88rem; font-weight: 600; text-decoration: none;
+      transition: background .2s, transform .2s;
+      animation: up .5s .24s ease both;
+    }
+    .hero-cta:hover { background: var(--accent); transform: translateY(-2px); }
 
-    .pad-header { display: flex; align-items: center; gap: 1rem; margin-bottom: 1.4rem; }
-    .pad-logo {
-      width: 48px; height: 48px; border-radius: 12px;
-      display: flex; align-items: center; justify-content: center;
-      flex-shrink: 0; font-size: 0;
-    }
-    .pad-logo svg { width: 28px; height: 28px; }
-    .pad-logo.google { background: #fff; border: 1.5px solid rgba(28,28,30,.1); }
-    .pad-logo.meta { background: #1877F2; }
-    .pad-logo.tiktok { background: #010101; }
-    .pad-logo.shopee { background: #EE4D2D; }
-    .pad-logo.tiktokshop { background: #010101; }
+    /* STRIP */
+    .strip { background: var(--black); padding: 1rem 0; overflow: hidden; white-space: nowrap; }
+    .strip-t { display: inline-flex; gap: 3rem; animation: mar 20s linear infinite; }
+    .strip-t span { font-size: .75rem; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: rgba(255,255,255,.35); }
+    .strip-t span::before { content: '—  '; color: rgba(255,255,255,.15); }
+    @keyframes mar { from{transform:translateX(0)} to{transform:translateX(-50%)} }
 
-    .pad-title-wrap h3 { font-size: 1rem; font-weight: 700; color: var(--charcoal); margin-bottom: .15rem; }
-    .pad-title-wrap span { font-size: .75rem; color: var(--muted); }
-    .pad-badge {
-      display: inline-block; margin-bottom: .9rem;
-      font-size: .65rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase;
-      padding: .25rem .7rem; border-radius: 100px;
-    }
-    .pad-badge.paid { background: #FFF0EB; color: var(--coral); }
-    .pad-badge.organic { background: #E8F5EE; color: #2E7D52; }
-    .pad-badge.marketplace { background: #EEF0FF; color: #4A4EDD; }
+    /* SECTIONS */
+    section { padding: 6rem 6%; }
+    .tag { font-size: .7rem; font-weight: 600; text-transform: uppercase; letter-spacing: .16em; color: var(--accent); margin-bottom: .8rem; }
+    .h2 { font-family: var(--ff-h); font-size: clamp(1.8rem, 3vw, 2.6rem); font-weight: 700; color: var(--black); line-height: 1.2; letter-spacing: -.02em; margin-bottom: 1rem; }
+    .lead { font-size: .95rem; color: var(--muted); line-height: 1.85; max-width: 520px; }
 
-    .pad-desc { font-size: .85rem; color: var(--muted); line-height: 1.7; margin-bottom: 1.2rem; }
-    .pad-features { list-style: none; }
-    .pad-features li {
-      display: flex; align-items: flex-start; gap: .6rem;
-      font-size: .82rem; color: var(--dark); margin-bottom: .5rem; line-height: 1.4;
+    /* ABOUT */
+    .about { background: var(--white); }
+    .about-g { display: grid; grid-template-columns: 1fr 1fr; gap: 6rem; align-items: center; }
+    .about-r p { font-size: .93rem; color: var(--muted); line-height: 1.9; margin-bottom: 1rem; }
+    .about-l { position: relative; }
+    .big-year {
+      font-family: var(--ff-h); font-size: clamp(6rem, 14vw, 12rem);
+      font-weight: 800; color: var(--light);
+      line-height: 1; letter-spacing: -.05em;
+      user-select: none;
     }
-    .pad-features li .dot {
-      width: 6px; height: 6px; border-radius: 50%;
-      flex-shrink: 0; margin-top: .35rem;
+    .about-label {
+      position: absolute; bottom: 1rem; left: 0;
+      font-size: .8rem; color: var(--muted); font-weight: 500;
+      border-top: 1px solid var(--border); padding-top: .6rem; width: 100%;
     }
-    .pad-card.google .dot { background: #4285F4; }
-    .pad-card.meta .dot { background: #1877F2; }
-    .pad-card.tiktok .dot { background: #EE1D52; }
-    .pad-card.shopee .dot { background: #EE4D2D; }
-    .pad-card.tiktokshop .dot { background: #EE1D52; }
+    .about-label strong { color: var(--black); }
+    .about-pills { display: flex; flex-wrap: wrap; gap: .6rem; margin-top: 1.8rem; }
+    .pill { background: var(--light); color: var(--dark); font-size: .78rem; font-weight: 500; padding: .4rem 1rem; border-radius: 100px; }
 
-    .pad-stat {
-      margin-top: 1.4rem; padding-top: 1.2rem;
-      border-top: 1px solid var(--border);
-      display: flex; gap: 1.5rem;
+    /* VALUES */
+    .values { background: var(--bg); }
+    .val-g { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-top: 3.5rem; }
+    .vc {
+      background: var(--white); border: 1px solid var(--border);
+      border-radius: 12px; padding: 2rem;
+      transition: box-shadow .3s, transform .3s;
     }
-    .pad-stat-item { text-align: left; }
-    .pad-stat-item strong { display: block; font-family: var(--ff-head); font-size: 1.2rem; color: var(--charcoal); line-height: 1; }
-    .pad-stat-item span { font-size: .7rem; color: var(--muted); text-transform: uppercase; letter-spacing: .07em; }
+    .vc:hover { box-shadow: 0 12px 32px rgba(0,0,0,.06); transform: translateY(-4px); }
+    .vc-num { font-family: var(--ff-h); font-size: 3rem; font-weight: 800; color: var(--light); line-height: 1; margin-bottom: 1rem; }
+    .vc h3 { font-family: var(--ff-h); font-size: .95rem; font-weight: 700; color: var(--black); margin-bottom: .5rem; }
+    .vc p { font-size: .83rem; color: var(--muted); line-height: 1.7; }
 
-    /* ───── CONTACT ───── */
-    .contact { background: #FFFFFF; }
-    .contact-grid { display: grid; grid-template-columns: 1fr 1.2fr; gap: 5rem; align-items: start; }
-    .contact-info .s-title { color: var(--charcoal); }
-    .contact-info .s-eyebrow { color: var(--coral); }
-    .contact-info .s-eyebrow::before { background: var(--coral); }
-    .contact-info p { color: var(--muted); line-height: 1.8; font-size: .95rem; margin-bottom: 2rem; }
-    .c-detail { display: flex; gap: 1rem; margin-bottom: 1.5rem; align-items: flex-start; }
-    .c-icon {
-      width: 42px; height: 42px; flex-shrink: 0;
-      background: #F5F5F5; border-radius: 10px;
-      display: flex; align-items: center; justify-content: center; font-size: 1rem;
-    }
-    .c-detail div { display: flex; flex-direction: column; }
-    .c-detail strong { font-size: .75rem; color: var(--muted); text-transform: uppercase; letter-spacing: .1em; margin-bottom: .15rem; }
-    .c-detail span { color: var(--charcoal); font-size: .92rem; }
-    .c-detail a { color: var(--charcoal); text-decoration: none; }
-    .c-detail a:hover { color: var(--coral); }
+    /* STATS */
+    .stats { background: var(--black); padding: 5rem 6%; }
+    .stats-g { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2rem; }
+    .st { text-align: center; padding: 2rem 1rem; border: 1px solid rgba(255,255,255,.07); border-radius: 12px; }
+    .st-n { font-family: var(--ff-h); font-size: clamp(2rem,4vw,3.2rem); font-weight: 800; color: var(--white); line-height: 1; margin-bottom: .4rem; }
+    .st-n em { color: var(--accent); font-style: normal; }
+    .st-l { font-size: .78rem; color: rgba(255,255,255,.4); text-transform: uppercase; letter-spacing: .1em; }
 
-    .contact-form {
-      background: #F5F5F5;
-      border: 1px solid rgba(28,28,30,.1);
-      border-radius: 20px; padding: 2.5rem;
+    /* CONTACT */
+    .contact { background: var(--white); }
+    .contact-g { display: grid; grid-template-columns: 1fr 1fr; gap: 6rem; align-items: start; }
+    .contact-l p { font-size: .93rem; color: var(--muted); line-height: 1.85; margin-top: .8rem; margin-bottom: 2.5rem; }
+    .c-row { display: flex; gap: .9rem; margin-bottom: 1.2rem; align-items: flex-start; }
+    .c-ic { width: 36px; height: 36px; background: var(--light); border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: .9rem; flex-shrink: 0; }
+    .c-row div strong { display: block; font-size: .7rem; text-transform: uppercase; letter-spacing: .1em; color: #aaa; margin-bottom: .15rem; }
+    .c-row div span, .c-row div a { font-size: .88rem; color: var(--dark); text-decoration: none; }
+    .c-row div a:hover { color: var(--accent); }
+    .cf { background: var(--bg); border: 1px solid var(--border); border-radius: 14px; padding: 2.5rem; }
+    .cf h3 { font-family: var(--ff-h); font-size: 1.2rem; font-weight: 700; color: var(--black); margin-bottom: .3rem; }
+    .cf-s { font-size: .8rem; color: var(--muted); margin-bottom: 2rem; }
+    .fg { margin-bottom: 1rem; }
+    .fg label { display: block; font-size: .7rem; font-weight: 600; text-transform: uppercase; letter-spacing: .1em; color: #aaa; margin-bottom: .4rem; }
+    .fg input, .fg textarea, .fg select {
+      width: 100%; background: var(--white); border: 1px solid var(--border);
+      border-radius: 7px; padding: .75rem 1rem;
+      color: var(--dark); font-family: var(--ff-b); font-size: .87rem;
+      outline: none; transition: border-color .2s; appearance: none;
     }
-    .cf-title { font-family: var(--ff-head); font-size: 1.5rem; color: var(--charcoal); margin-bottom: .4rem; }
-    .cf-sub { font-size: .82rem; color: var(--muted); margin-bottom: 2rem; }
-    .fgroup { margin-bottom: 1.1rem; }
-    .fgroup label { display: block; font-size: .75rem; font-weight: 600; text-transform: uppercase; letter-spacing: .08em; color: var(--muted); margin-bottom: .4rem; }
-    .fgroup input, .fgroup textarea, .fgroup select {
-      width: 100%;
-      background: #FFFFFF;
-      border: 1px solid rgba(28,28,30,.15);
-      border-radius: 8px;
-      padding: .8rem 1rem;
-      color: var(--charcoal); font-family: var(--ff-body); font-size: .88rem;
-      outline: none; transition: border-color .2s, background .2s;
-      appearance: none;
-    }
-    .fgroup input::placeholder, .fgroup textarea::placeholder { color: rgba(28,28,30,.3); }
-    .fgroup input:focus, .fgroup textarea:focus, .fgroup select:focus {
-      border-color: var(--coral); background: #FFFFFF;
-    }
-    .fgroup select option { background: #FFFFFF; }
-    .fgroup textarea { min-height: 100px; resize: vertical; }
-    .frow { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
-    .fsubmit {
-      width: 100%; margin-top: .5rem;
-      background: var(--coral); color: #fff;
-      border: none; padding: .92rem;
-      border-radius: 8px;
-      font-size: .95rem; font-weight: 700; font-family: var(--ff-body);
-      cursor: pointer; transition: background .2s, transform .15s;
-      display: flex; align-items: center; justify-content: center; gap: .5rem;
-    }
-    .fsubmit:hover { background: var(--coral-d); transform: translateY(-2px); }
-    .fprivacy { font-size: .72rem; color: var(--muted); text-align: center; margin-top: .8rem; line-height: 1.6; }
-    .fprivacy a { color: var(--muted); }
+    .fg input:focus, .fg textarea:focus, .fg select:focus { border-color: var(--black); }
+    .fg input::placeholder, .fg textarea::placeholder { color: #ccc; }
+    .fg select option { background: var(--white); }
+    .fg textarea { min-height: 95px; resize: vertical; }
+    .fg-r { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+    .fsub { width: 100%; margin-top: .4rem; background: var(--black); color: #fff; border: none; padding: .85rem; border-radius: 7px; font-size: .88rem; font-weight: 700; font-family: var(--ff-b); cursor: pointer; transition: background .2s, transform .15s; }
+    .fsub:hover { background: var(--accent); transform: translateY(-2px); }
+    .fn { font-size: .7rem; color: #bbb; text-align: center; margin-top: .8rem; line-height: 1.6; }
+    .fn a { color: #999; }
 
-    /* ───── FOOTER ───── */
-    footer { background: #F5F5F5; padding: 3.5rem 5% 2rem; }
-    .footer-main { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 3rem; margin-bottom: 3rem; }
-    .footer-brand p { font-size: .85rem; color: var(--muted); line-height: 1.75; margin-top: .9rem; max-width: 280px; }
-    .footer-col h4 { font-size: .8rem; font-weight: 700; text-transform: uppercase; letter-spacing: .12em; color: var(--muted); margin-bottom: 1rem; }
-    .footer-col ul { list-style: none; }
-    .footer-col ul li { margin-bottom: .6rem; }
-    .footer-col ul li a { color: var(--muted); text-decoration: none; font-size: .85rem; transition: color .2s; }
-    .footer-col ul li a:hover { color: var(--charcoal); }
-    .footer-bottom { border-top: 1px solid rgba(28,28,30,.1); padding-top: 1.5rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: gap; }
-    .footer-bottom p { font-size: .78rem; color: var(--muted); }
-    .footer-legal { display: flex; gap: 2rem; }
-    .footer-legal a { font-size: .78rem; color: var(--muted); text-decoration: none; transition: color .2s; }
-    .footer-legal a:hover { color: var(--charcoal); }
+    /* FOOTER */
+    footer { background: var(--black); padding: 2.5rem 6%; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1.5rem; }
+    .f-logo { font-family: var(--ff-h); font-size: .95rem; font-weight: 700; color: rgba(255,255,255,.6); }
+    .f-links { display: flex; gap: 2rem; }
+    .f-links a { font-size: .78rem; color: rgba(255,255,255,.3); text-decoration: none; transition: color .2s; }
+    .f-links a:hover { color: rgba(255,255,255,.6); }
+    footer p { font-size: .75rem; color: rgba(255,255,255,.25); }
 
-    /* ───── ANIMATIONS ───── */
-    @keyframes slideUp { from { opacity:0; transform:translateY(28px); } to { opacity:1; transform:none; } }
-    @keyframes slideLeft { from { opacity:0; transform:translateX(28px); } to { opacity:1; transform:none; } }
-    .reveal { opacity:0; transform:translateY(28px); transition: opacity .65s ease, transform .65s ease; }
+    /* ANIM */
+    @keyframes up { from{opacity:0;transform:translateY(20px)} to{opacity:1;transform:none} }
+    .reveal { opacity:0; transform:translateY(20px); transition:opacity .6s ease, transform .6s ease; }
     .reveal.in { opacity:1; transform:none; }
-    .reveal-delay-1 { transition-delay: .1s; }
-    .reveal-delay-2 { transition-delay: .2s; }
-    .reveal-delay-3 { transition-delay: .3s; }
 
-    /* ───── RESPONSIVE ───── */
-    @media (max-width:1100px) {
-      .cat-grid { grid-template-columns: 1fr; }
-      .cat-card { aspect-ratio: auto; min-height: 200px; flex-direction: row; align-items: stretch; }
-      .cat-bg { width: 160px; flex-shrink:0; }
-      .platform-grid { grid-template-columns: repeat(2,1fr); }
-      .footer-main { grid-template-columns: 1fr 1fr; }
+    @media(max-width:900px) {
+      .about-g, .contact-g { grid-template-columns:1fr; gap:3rem; }
+      .val-g { grid-template-columns:1fr; }
+      .stats-g { grid-template-columns:repeat(2,1fr); }
+      .nav-r li:not(:last-child) { display:none; }
+      .fg-r { grid-template-columns:1fr; }
     }
-    @media (max-width:900px) {
-      .hero { grid-template-columns:1fr; gap:3rem; }
-      .hero::after { display:none; }
-      .hero-visual { display:none; }
-      .about-grid, .ads-intro, .contact-grid { grid-template-columns:1fr; gap:3rem; }
-      .stats-inner { grid-template-columns:repeat(2,1fr); }
-      .why-grid { grid-template-columns:repeat(2,1fr); }
-      .testi-grid { grid-template-columns:1fr; }
-      .nav-links { display:none; }
-      .hamburger { display:flex; }
-      .cat-grid { grid-template-columns:1fr; }
-      .cat-card { aspect-ratio:16/7; }
-      .platform-ads-grid { grid-template-columns:1fr; }
-      .platform-ads-grid.two-col { grid-template-columns:1fr; }
-      .ads-metrics-bar { grid-template-columns:repeat(2,1fr); }
-    }
-    @media (max-width:600px) {
-      section { padding:4rem 5%; }
-      .stats-inner { grid-template-columns:1fr 1fr; }
-      .why-grid, .platform-grid { grid-template-columns:1fr; }
-      .frow { grid-template-columns:1fr; }
-      .footer-main { grid-template-columns:1fr; gap:2rem; }
-      .footer-bottom { flex-direction:column; gap:1rem; text-align:center; }
-      .about-chip { right:.5rem; }
+    @media(max-width:500px) {
+      .stats-g { grid-template-columns:1fr 1fr; }
+      footer { flex-direction:column; text-align:center; }
     }
   </style>
 </head>
 <body>
 
-<!-- ══ NAV ══ -->
-<nav id="nav">
-  <a href="#" class="logo-wrap">
-    <div class="logo-icon">H</div>
-    <div class="logo-text">Hana Digital Media<small>PT Hana Digital Media</small></div>
-  </a>
-  <ul class="nav-links">
+<nav>
+  <a href="#" class="logo">PT Hana Digital Media</a>
+  <ul class="nav-r">
     <li><a href="#tentang">Tentang</a></li>
-    <li><a href="#kategori">Kategori</a></li>
-    <li><a href="#platform">Platform</a></li>
-    <li><a href="#google-ads">Iklan Digital</a></li>
-    <li><a href="#kontak" class="nav-cta">Hubungi Kami</a></li>
+    <li><a href="#nilai">Nilai</a></li>
+    <li><a href="#kontak" class="cta">Kontak</a></li>
   </ul>
-  <div class="hamburger" onclick="this.parentElement.querySelector('.nav-links').style.display='flex'">
-    <span></span><span></span><span></span>
-  </div>
 </nav>
 
-<!-- ══ HERO ══ -->
+<!-- HERO -->
 <section class="hero" id="beranda">
-  <div>
-    <div class="hero-eyebrow"><div class="eyebrow-line"></div> E-Commerce Terpercaya Indonesia</div>
-    <h1>Belanja <span class="accent">Rumah, Fashion</span><br>& Lifestyle Lebih Mudah</h1>
-    <p class="hero-sub">PT Hana Digital Media menghadirkan pengalaman belanja online yang menyenangkan — ribuan produk kebutuhan rumah tangga, fashion, dan lifestyle pilihan tersedia di platform digital kami.</p>
-    <div class="hero-btns">
-      <a href="#kategori" class="btn-fill">Jelajahi Produk ›</a>
-      <a href="#kontak" class="btn-ghost">Hubungi Kami</a>
-    </div>
-    <div class="hero-trust">
-      <div class="trust-item"><span class="t-icon">✅</span><span><strong>Produk Terjamin</strong> Kualitas terpilih</span></div>
-      <div class="trust-item"><span class="t-icon">🚀</span><span><strong>Pengiriman Cepat</strong> Ke seluruh Indonesia</span></div>
-      <div class="trust-item"><span class="t-icon">🔒</span><span><strong>Transaksi Aman</strong> Enkripsi penuh</span></div>
-    </div>
-  </div>
-  <div class="hero-visual">
-    <div class="product-showcase">
-      <div class="p-card">
-        <div class="p-card-img"><img src="https://images.unsplash.com/photo-1565814329452-e1efa11c5b89?w=400&q=80" alt="Lampu Gantung LED" /></div>
-        <div class="p-card-info"><div class="p-card-cat">Rumah Tangga</div><div class="p-card-name">Lampu Gantung LED</div><div class="p-card-price">Mulai Rp 189.000</div></div>
-      </div>
-      <div class="p-card">
-        <div class="p-card-img"><img src="https://images.unsplash.com/photo-1594938298603-c8148c4dae35?w=400&q=80" alt="Dress Casual Modern" /></div>
-        <div class="p-card-info"><div class="p-card-cat">Fashion</div><div class="p-card-name">Dress Casual Modern</div><div class="p-card-price">Mulai Rp 149.000</div></div>
-      </div>
-      <div class="p-card">
-        <div class="p-card-img"><img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=400&q=80" alt="Phone Screen Magnifier" /></div>
-        <div class="p-card-info"><div class="p-card-cat">Lifestyle</div><div class="p-card-name">Phone Screen Magnifier</div><div class="p-card-price">Mulai Rp 99.000</div></div>
-      </div>
-      <div class="p-card">
-        <div class="p-card-img"><img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?w=400&q=80" alt="Rak Pengering Piring" /></div>
-        <div class="p-card-info"><div class="p-card-cat">Rumah Tangga</div><div class="p-card-name">Rak Pengering Piring</div><div class="p-card-price">Mulai Rp 149.000</div></div>
-      </div>
-    </div>
+  <div class="hero-inner">
+    <div class="hero-year">Berdiri sejak 2020 · Depok, Jawa Barat</div>
+    <h1>Bisnis yang<br>Tumbuh <em>Bersama</em><br>Era Digital</h1>
+    <p class="hero-desc">PT Hana Digital Media adalah perusahaan yang bergerak di bidang perdagangan elektronik, menghadirkan kemudahan berbelanja produk kebutuhan sehari-hari melalui platform digital.</p>
+    <a href="#tentang" class="hero-cta">Tentang Kami →</a>
   </div>
 </section>
 
-<!-- ══ MARQUEE ══ -->
+<!-- STRIP -->
 <div class="strip">
-  <div class="strip-track">
-    <span class="strip-item">Rumah Tangga</span>
-    <span class="strip-item">Fashion Wanita</span>
-    <span class="strip-item">Fashion Pria</span>
-    <span class="strip-item">Lifestyle</span>
-    <span class="strip-item">Elektronik</span>
-    <span class="strip-item">Perawatan Diri</span>
-    <span class="strip-item">Dapur & Memasak</span>
-    <span class="strip-item">Dekorasi Rumah</span>
-    <span class="strip-item">Olahraga</span>
-    <span class="strip-item">Aksesori</span>
-    <!-- duplicate for seamless loop -->
-    <span class="strip-item">Rumah Tangga</span>
-    <span class="strip-item">Fashion Wanita</span>
-    <span class="strip-item">Fashion Pria</span>
-    <span class="strip-item">Lifestyle</span>
-    <span class="strip-item">Elektronik</span>
-    <span class="strip-item">Perawatan Diri</span>
-    <span class="strip-item">Dapur & Memasak</span>
-    <span class="strip-item">Dekorasi Rumah</span>
-    <span class="strip-item">Olahraga</span>
-    <span class="strip-item">Aksesori</span>
+  <div class="strip-t">
+    <span>Rumah Tangga</span><span>Fashion</span><span>Lifestyle</span><span>E-Commerce</span><span>Platform Digital</span><span>Depok</span><span>Indonesia</span>
+    <span>Rumah Tangga</span><span>Fashion</span><span>Lifestyle</span><span>E-Commerce</span><span>Platform Digital</span><span>Depok</span><span>Indonesia</span>
   </div>
 </div>
 
-<!-- ══ ABOUT ══ -->
+<!-- ABOUT -->
 <section class="about reveal" id="tentang">
-  <div class="about-grid">
-    <div class="about-left">
-      <div class="about-img">
-        <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&q=80" alt="Kantor PT Hana Digital Media" />
-      </div>
-      <div class="about-chip">
-        <strong>5+</strong>
-        <span>Tahun Beroperasi</span>
-      </div>
+  <div class="about-g">
+    <div class="about-l">
+      <div class="big-year">2020</div>
+      <div class="about-label">Didirikan · <strong>Depok, Jawa Barat</strong></div>
     </div>
-    <div class="about-right">
-      <div class="s-eyebrow">Tentang Kami</div>
-      <h2 class="s-title">Platform E-Commerce Lokal yang Anda Percayai</h2>
-      <p>PT Hana Digital Media adalah perusahaan e-commerce yang berkantor pusat di Depok, bergerak di bidang penjualan produk kebutuhan rumah tangga, fashion, dan lifestyle secara online. Kami berdiri dengan misi menyediakan akses belanja yang mudah, terjangkau, dan terpercaya bagi masyarakat Indonesia.</p>
-      <p>Kami beroperasi melalui platform digital sendiri sekaligus hadir di berbagai marketplace populer, memastikan pelanggan dapat berbelanja dari mana saja dengan pengalaman yang menyenangkan dan transaksi yang aman.</p>
-      <div class="about-pillars">
-        <div class="pillar"><strong>Visi</strong><span>Menjadi platform e-commerce pilihan utama masyarakat Indonesia</span></div>
-        <div class="pillar"><strong>Misi</strong><span>Menyediakan produk berkualitas dengan harga terbaik dan layanan prima</span></div>
-        <div class="pillar"><strong>Nilai</strong><span>Kepercayaan, transparansi, dan kepuasan pelanggan di atas segalanya</span></div>
-        <div class="pillar"><strong>Komitmen</strong><span>Pengiriman tepat waktu, produk sesuai deskripsi, retur mudah</span></div>
+    <div class="about-r">
+      <div class="tag">Tentang Kami</div>
+      <h2 class="h2">Perusahaan E-Commerce Lokal yang Bertumbuh</h2>
+      <p>PT Hana Digital Media didirikan pada tahun 2020 di Depok, Jawa Barat. Sejak awal berdiri, perusahaan kami bergerak di bidang perdagangan elektronik dengan fokus pada penjualan produk kebutuhan rumah tangga, fashion, dan lifestyle melalui berbagai platform digital.</p>
+      <p>Kami percaya bahwa belanja online harus terasa mudah, aman, dan menyenangkan. Dengan tim yang berdedikasi dan pemahaman mendalam tentang kebutuhan konsumen Indonesia, kami terus berkembang untuk memberikan pengalaman berbelanja terbaik.</p>
+      <div class="about-pills">
+        <span class="pill">Rumah Tangga</span>
+        <span class="pill">Fashion</span>
+        <span class="pill">Lifestyle</span>
+        <span class="pill">Platform Digital</span>
+        <span class="pill">Seluruh Indonesia</span>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ══ CATEGORIES ══ -->
-<section class="categories reveal" id="kategori">
-  <div class="s-head">
-    <div>
-      <div class="s-eyebrow">Kategori Produk</div>
-      <h2 class="s-title">Temukan Semua<br>yang Anda Butuhkan</h2>
+<!-- VALUES -->
+<section class="values reveal" id="nilai">
+  <div class="tag">Nilai Perusahaan</div>
+  <h2 class="h2">Prinsip yang Memandu<br>Setiap Langkah Kami</h2>
+  <div class="val-g">
+    <div class="vc">
+      <div class="vc-num">01</div>
+      <h3>Kepercayaan Pelanggan</h3>
+      <p>Kepercayaan adalah fondasi utama bisnis kami. Setiap produk yang kami jual telah melalui seleksi ketat untuk memastikan kualitas dan keasliannya.</p>
     </div>
-    <p class="s-desc">Dari kebutuhan dapur hingga outfit terkini — semua tersedia di satu platform dengan jaminan kualitas dan harga terbaik.</p>
-  </div>
-  <div class="cat-grid">
-    <div class="cat-card">
-      <div class="cat-bg"><img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=800&q=80" alt="Rumah Tangga" /></div>
-      <div class="cat-overlay">
-        <span class="cat-tag">Terlaris</span>
-        <h3>Rumah Tangga</h3>
-        <p>Perabot, peralatan dapur, dekorasi, dan perlengkapan rumah pilihan untuk hunian nyaman Anda</p>
-        <div class="cat-arrow">›</div>
-      </div>
+    <div class="vc">
+      <div class="vc-num">02</div>
+      <h3>Kemudahan Berbelanja</h3>
+      <p>Kami berkomitmen untuk menghadirkan pengalaman belanja online yang sederhana, cepat, dan menyenangkan bagi setiap pelanggan di seluruh Indonesia.</p>
     </div>
-    <div class="cat-card">
-      <div class="cat-bg"><img src="https://images.unsplash.com/photo-1558769132-cb1aea458c5e?w=800&q=80" alt="Fashion" /></div>
-      <div class="cat-overlay">
-        <span class="cat-tag">Tren Terbaru</span>
-        <h3>Fashion</h3>
-        <p>Koleksi pakaian, sepatu, dan aksesori fashion wanita dan pria mengikuti tren terkini</p>
-        <div class="cat-arrow">›</div>
-      </div>
-    </div>
-    <div class="cat-card">
-      <div class="cat-bg"><img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=800&q=80" alt="Lifestyle" /></div>
-      <div class="cat-overlay">
-        <span class="cat-tag">Gaya Hidup</span>
-        <h3>Lifestyle</h3>
-        <p>Produk perawatan diri, olahraga, gadget, dan semua yang mendukung gaya hidup modern Anda</p>
-        <div class="cat-arrow">›</div>
-      </div>
+    <div class="vc">
+      <div class="vc-num">03</div>
+      <h3>Pertumbuhan Berkelanjutan</h3>
+      <p>Sejak 2020, kami terus berkembang dengan mengikuti tren digital dan kebutuhan pasar untuk memberikan layanan yang semakin baik dari waktu ke waktu.</p>
     </div>
   </div>
 </section>
 
-<!-- ══ STATS ══ -->
-<div class="stats-band reveal">
-  <div class="stats-inner">
-    <div class="stat-item"><div class="stat-num">50K+</div><div class="stat-label">Produk Tersedia</div></div>
-    <div class="stat-item"><div class="stat-num">120K+</div><div class="stat-label">Pelanggan Aktif</div></div>
-    <div class="stat-item"><div class="stat-num">500K+</div><div class="stat-label">Pesanan Terkirim</div></div>
-    <div class="stat-item"><div class="stat-num">4.8★</div><div class="stat-label">Rating Kepuasan</div></div>
+<!-- STATS -->
+<div class="stats reveal">
+  <div class="stats-g">
+    <div class="st"><div class="st-n">2020</div><div class="st-l">Tahun Berdiri</div></div>
+    <div class="st"><div class="st-n">4<em>+</em></div><div class="st-l">Tahun Beroperasi</div></div>
+    <div class="st"><div class="st-n">3</div><div class="st-l">Kategori Produk</div></div>
+    <div class="st"><div class="st-n">100<em>%</em></div><div class="st-l">Digital</div></div>
   </div>
 </div>
 
-<!-- ══ WHY US ══ -->
-<section class="why reveal">
-  <div class="s-head">
-    <div>
-      <div class="s-eyebrow">Keunggulan Kami</div>
-      <h2 class="s-title">Mengapa Belanja<br>di Hana Digital Media?</h2>
-    </div>
-  </div>
-  <div class="why-grid">
-    <div class="why-card">
-      <div class="why-card-icon c1">🛡️</div>
-      <h3>Produk 100% Original</h3>
-      <p>Setiap produk melalui proses seleksi dan verifikasi ketat. Kami hanya bermitra dengan supplier terpercaya dan merek resmi.</p>
-    </div>
-    <div class="why-card">
-      <div class="why-card-icon c2">🚚</div>
-      <h3>Pengiriman Seluruh Indonesia</h3>
-      <p>Kami bermitra dengan kurir terpercaya untuk menjamin pengiriman tepat waktu ke seluruh penjuru Indonesia.</p>
-    </div>
-    <div class="why-card">
-      <div class="why-card-icon c3">💳</div>
-      <h3>Pembayaran Mudah & Aman</h3>
-      <p>Berbagai metode pembayaran tersedia — transfer bank, e-wallet, kartu kredit, hingga bayar di tempat (COD).</p>
-    </div>
-    <div class="why-card">
-      <div class="why-card-icon c4">🔄</div>
-      <h3>Kebijakan Retur & Garansi</h3>
-      <p>Tidak puas dengan produk? Proses retur dan pengembalian dana kami mudah, cepat, dan tanpa ribet.</p>
-    </div>
-    <div class="why-card">
-      <div class="why-card-icon c5">💬</div>
-      <h3>Layanan Pelanggan 7 Hari</h3>
-      <p>Tim customer service kami siap membantu Anda setiap hari melalui live chat, WhatsApp, dan email.</p>
-    </div>
-    <div class="why-card">
-      <div class="why-card-icon c6">🏷️</div>
-      <h3>Harga Terbaik & Promo Menarik</h3>
-      <p>Nikmati harga kompetitif, flash sale harian, dan promo spesial member untuk penghematan maksimal.</p>
-    </div>
-  </div>
-</section>
-
-<!-- ══ PLATFORMS ══ -->
-<section class="platforms reveal" id="platform">
-  <div class="s-head">
-    <div>
-      <div class="s-eyebrow">Platform Kami</div>
-      <h2 class="s-title">Tersedia di Berbagai<br>Platform Digital</h2>
-    </div>
-  </div>
-  <div class="platform-grid">
-    <div class="plat-card">
-      <span class="plat-icon">🌐</span>
-      <h4>Website Resmi</h4>
-      <p>Belanja langsung di website resmi kami untuk penawaran eksklusif dan program loyalitas member</p>
-      <span class="plat-badge">Eksklusif</span>
-    </div>
-    <div class="plat-card">
-      <span class="plat-icon">🟠</span>
-      <h4>Shopee</h4>
-      <p>Toko resmi kami di Shopee dengan ribuan ulasan bintang lima dari pelanggan setia</p>
-      <span class="plat-badge">Official Store</span>
-    </div>
-    <div class="plat-card">
-      <span class="plat-icon">🟢</span>
-      <h4>Tokopedia</h4>
-      <p>Dapatkan gratis ongkir dan cashback menarik di toko resmi kami di Tokopedia</p>
-      <span class="plat-badge">Power Merchant</span>
-    </div>
-    <div class="plat-card">
-      <span class="plat-icon">📱</span>
-      <h4>Mobile App</h4>
-      <p>Unduh aplikasi Hana Digital Media untuk pengalaman belanja yang lebih cepat dan personal</p>
-      <span class="plat-badge">Segera Hadir</span>
-    </div>
-  </div>
-</section>
-
-<!-- ══ DIGITAL MARKETING ══ -->
-<section class="ads-section reveal" id="google-ads">
-
-  <!-- Intro + headline -->
-  <div class="ads-intro">
-    <div class="ads-text">
-      <div class="s-eyebrow">Pemasaran Digital</div>
-      <h2 class="s-title">Strategi Multi-Platform untuk Jangkauan Maksimal</h2>
-      <p>PT Hana Digital Media menjalankan strategi pemasaran digital menyeluruh di lima platform utama — mulai dari pencarian Google, media sosial, hingga marketplace terkemuka Indonesia. Setiap platform dipilih secara strategis untuk menjangkau segmen pelanggan yang tepat pada waktu yang tepat.</p>
-      <ul class="ads-list">
-        <li>Seluruh kampanye dijalankan sesuai kebijakan iklan masing-masing platform</li>
-        <li>Penargetan berbasis data, minat, dan perilaku konsumen Indonesia</li>
-        <li>Optimasi berkelanjutan berdasarkan analitik real-time dan ROAS</li>
-        <li>Konten iklan relevan, transparan, dan tidak menyesatkan</li>
-      </ul>
-    </div>
-    <div>
-      <!-- Overall metrics -->
-      <div class="ads-metrics-bar">
-        <div class="ads-metric-card">
-          <div class="metric-val coral">5</div>
-          <div class="metric-label">Platform Aktif</div>
-        </div>
-        <div class="ads-metric-card">
-          <div class="metric-val green">2.2x</div>
-          <div class="metric-label">Rata-rata ROAS</div>
-        </div>
-        <div class="ads-metric-card">
-          <div class="metric-val blue">2.4 Jt+</div>
-          <div class="metric-label">Total Jangkauan</div>
-        </div>
-        <div class="ads-metric-card">
-          <div class="metric-val dark">+187%</div>
-          <div class="metric-label">Konversi YoY</div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Platform cards row 1: Google, Meta, TikTok -->
-  <div class="platform-ads-grid">
-
-    <!-- Google Ads -->
-    <div class="pad-card google">
-      <div class="pad-header">
-        <div class="pad-logo google">
-          <!-- Google "G" SVG -->
-          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-            <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/>
-            <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/>
-            <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"/>
-            <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/>
-          </svg>
-        </div>
-        <div class="pad-title-wrap">
-          <h3>Google Ads</h3>
-          <span>Search · Display · Shopping</span>
-        </div>
-      </div>
-      <span class="pad-badge paid">Paid Advertising</span>
-      <p class="pad-desc">Kami memanfaatkan Google Ads untuk menjangkau calon pelanggan yang secara aktif mencari produk rumah tangga, fashion, dan lifestyle di mesin pencari terbesar dunia.</p>
-      <ul class="pad-features">
-        <li><span class="dot"></span><strong>Search Ads</strong> — Muncul di halaman pertama Google saat pengguna mencari produk relevan</li>
-        <li><span class="dot"></span><strong>Shopping Ads</strong> — Tampilkan gambar produk, harga, dan nama toko langsung di hasil pencarian</li>
-        <li><span class="dot"></span><strong>Display Network</strong> — Banner visual di jutaan website partner Google di seluruh Indonesia</li>
-        <li><span class="dot"></span><strong>Remarketing</strong> — Menjangkau kembali pengunjung yang belum menyelesaikan pembelian</li>
-      </ul>
-      <div class="pad-stat">
-        <div class="pad-stat-item"><strong>1.8 Jt+</strong><span>Impresi/bulan</span></div>
-        <div class="pad-stat-item"><strong>3.8x</strong><span>ROAS</span></div>
-        <div class="pad-stat-item"><strong>4.2%</strong><span>CTR rata-rata</span></div>
-      </div>
-    </div>
-
-    <!-- Meta Ads -->
-    <div class="pad-card meta">
-      <div class="pad-header">
-        <div class="pad-logo meta">
-          <!-- Meta "f" logo -->
-          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-            <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" fill="#ffffff"/>
-          </svg>
-        </div>
-        <div class="pad-title-wrap">
-          <h3>Meta Ads</h3>
-          <span>Facebook & Instagram</span>
-        </div>
-      </div>
-      <span class="pad-badge paid">Paid Advertising</span>
-      <p class="pad-desc">Platform Meta memungkinkan kami menjangkau lebih dari 100 juta pengguna aktif Indonesia di Facebook dan Instagram dengan iklan visual yang sangat tertarget.</p>
-      <ul class="pad-features">
-        <li><span class="dot"></span><strong>Instagram Feed & Stories</strong> — Konten visual premium menjangkau audiens fashion dan lifestyle</li>
-        <li><span class="dot"></span><strong>Facebook Feed Ads</strong> — Kampanye awareness dan konversi berbasis demografi dan minat</li>
-        <li><span class="dot"></span><strong>Catalog & Dynamic Ads</strong> — Otomatis tampilkan produk relevan kepada pengguna yang pernah berinteraksi</li>
-        <li><span class="dot"></span><strong>Lookalike Audience</strong> — Jangkau pengguna baru yang mirip profil pelanggan terbaik kami</li>
-      </ul>
-      <div class="pad-stat">
-        <div class="pad-stat-item"><strong>320K+</strong><span>Followers</span></div>
-        <div class="pad-stat-item"><strong>4.5x</strong><span>ROAS</span></div>
-        <div class="pad-stat-item"><strong>6.8%</strong><span>Engagement</span></div>
-      </div>
-    </div>
-
-    <!-- TikTok Ads -->
-    <div class="pad-card tiktok">
-      <div class="pad-header">
-        <div class="pad-logo tiktok">
-          <!-- TikTok logo SVG -->
-          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-            <path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.34 6.34 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.18 8.18 0 004.78 1.53V6.77a4.85 4.85 0 01-1.01-.08z" fill="#ffffff"/>
-          </svg>
-        </div>
-        <div class="pad-title-wrap">
-          <h3>TikTok Ads</h3>
-          <span>In-Feed · TopView · Spark</span>
-        </div>
-      </div>
-      <span class="pad-badge paid">Paid Advertising</span>
-      <p class="pad-desc">TikTok adalah platform dengan pertumbuhan tercepat di Indonesia. Kami memanfaatkan format video pendek untuk memperkenalkan produk secara autentik dan menghibur kepada generasi muda.</p>
-      <ul class="pad-features">
-        <li><span class="dot"></span><strong>In-Feed Video Ads</strong> — Iklan video native di halaman For You pengguna TikTok</li>
-        <li><span class="dot"></span><strong>Spark Ads</strong> — Amplifikasi konten organik dari akun brand dan kreator afiliasi</li>
-        <li><span class="dot"></span><strong>TopView Ads</strong> — Tayangan premium saat pengguna pertama kali membuka aplikasi</li>
-        <li><span class="dot"></span><strong>Branded Hashtag Challenge</strong> — Kampanye viral melibatkan partisipasi aktif pengguna</li>
-      </ul>
-      <div class="pad-stat">
-        <div class="pad-stat-item"><strong>5.2 Jt+</strong><span>Views/bulan</span></div>
-        <div class="pad-stat-item"><strong>4.9x</strong><span>ROAS</span></div>
-        <div class="pad-stat-item"><strong>9.1%</strong><span>Engagement</span></div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Platform cards row 2: Shopee, TikTok Shop -->
-  <div class="platform-ads-grid two-col">
-
-    <!-- Shopee -->
-    <div class="pad-card shopee">
-      <div class="pad-header">
-        <div class="pad-logo shopee">
-          <!-- Shopee bag icon -->
-          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-            <path d="M19.5 8.5h-2A5.5 5.5 0 007 8.5H5a2 2 0 00-2 2v9a2 2 0 002 2h14a2 2 0 002-2v-9a2 2 0 00-2-2zm-12 0a3.5 3.5 0 017 0zM12 17a2 2 0 110-4 2 2 0 010 4z" fill="#ffffff"/>
-          </svg>
-        </div>
-        <div class="pad-title-wrap">
-          <h3>Shopee</h3>
-          <span>Shopee Ads · Shopee Live · Affiliate</span>
-        </div>
-      </div>
-      <span class="pad-badge marketplace">Marketplace</span>
-      <p class="pad-desc">Sebagai Official Store di Shopee — marketplace terbesar Indonesia — kami mengoptimalkan seluruh ekosistem iklan Shopee untuk mendominasi kategori produk rumah tangga, fashion, dan lifestyle.</p>
-      <ul class="pad-features">
-        <li><span class="dot"></span><strong>Shopee Search Ads</strong> — Posisi teratas di hasil pencarian dalam platform Shopee</li>
-        <li><span class="dot"></span><strong>Shopee Discovery Ads</strong> — Banner dan rekomendasi produk di halaman utama dan kategori</li>
-        <li><span class="dot"></span><strong>Shopee Live</strong> — Sesi live streaming interaktif untuk demonstrasi dan flash sale produk</li>
-        <li><span class="dot"></span><strong>Shopee Affiliate</strong> — Program afiliasi dengan kreator dan influencer untuk jangkauan organik</li>
-        <li><span class="dot"></span><strong>Shopee Flash Sale</strong> — Partisipasi di program flash sale harian dan kampanye tanggal kembar</li>
-      </ul>
-      <div class="pad-stat">
-        <div class="pad-stat-item"><strong>28K+</strong><span>Produk Terdaftar</span></div>
-        <div class="pad-stat-item"><strong>4.9★</strong><span>Rating Toko</span></div>
-        <div class="pad-stat-item"><strong>95%</strong><span>Chat Direspons</span></div>
-        <div class="pad-stat-item"><strong>50K+</strong><span>Ulasan Positif</span></div>
-      </div>
-    </div>
-
-    <!-- TikTok Shop -->
-    <div class="pad-card tiktokshop">
-      <div class="pad-header">
-        <div class="pad-logo tiktokshop">
-          <!-- TikTok Shop icon -->
-          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-            <path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.34 6.34 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.18 8.18 0 004.78 1.53V6.77a4.85 4.85 0 01-1.01-.08z" fill="#EE1D52"/>
-            <circle cx="19" cy="5" r="4" fill="#EE1D52" opacity="0"/>
-            <path d="M6.5 17.5h11l-1.5-6h-8z" fill="#69C9D0" opacity="0.9"/>
-          </svg>
-        </div>
-        <div class="pad-title-wrap">
-          <h3>TikTok Shop</h3>
-          <span>Live Shopping · Affiliate · Video Commerce</span>
-        </div>
-      </div>
-      <span class="pad-badge marketplace">Marketplace</span>
-      <p class="pad-desc">TikTok Shop menggabungkan hiburan dan belanja dalam satu platform. Kami memanfaatkan social commerce ini untuk menjangkau jutaan pengguna TikTok dan mengkonversi penonton menjadi pembeli secara langsung.</p>
-      <ul class="pad-features">
-        <li><span class="dot"></span><strong>TikTok Live Shopping</strong> — Sesi live belanja interaktif dengan demo produk dan penawaran eksklusif real-time</li>
-        <li><span class="dot"></span><strong>Video Shopping Ads</strong> — Iklan video shoppable dengan tombol beli langsung di dalam konten</li>
-        <li><span class="dot"></span><strong>Affiliate Creator Program</strong> — Kolaborasi dengan ribuan kreator TikTok untuk review dan promosi produk</li>
-        <li><span class="dot"></span><strong>Product Showcase</strong> — Etalase produk terintegrasi di profil dan konten video akun brand kami</li>
-        <li><span class="dot"></span><strong>Flash Deal & Voucher</strong> — Penawaran waktu terbatas eksklusif platform untuk mendorong konversi cepat</li>
-      </ul>
-      <div class="pad-stat">
-        <div class="pad-stat-item"><strong>1.2 Jt+</strong><span>Followers</span></div>
-        <div class="pad-stat-item"><strong>5.1x</strong><span>ROAS</span></div>
-        <div class="pad-stat-item"><strong>180K+</strong><span>Pesanan/bulan</span></div>
-        <div class="pad-stat-item"><strong>4.8★</strong><span>Rating</span></div>
-      </div>
-    </div>
-  </div>
-
-</section>
-
-<!-- ══ TESTIMONIALS ══ -->
-<section class="testimonials reveal" id="ulasan">
-  <div class="s-head">
-    <div>
-      <div class="s-eyebrow">Testimoni Pelanggan</div>
-      <h2 class="s-title">Kata Mereka tentang<br>Hana Digital Media</h2>
-    </div>
-  </div>
-  <div class="testi-grid">
-    <div class="testi-card">
-      <div class="stars">★★★★★</div>
-      <blockquote>Belanja perabotan dapur di sini sudah berkali-kali dan selalu puas. Produknya sesuai foto, packing rapi, dan pengiriman cepat. Customer service juga responsif banget!</blockquote>
-      <div class="testi-author">
-        <div class="testi-av" style="background:linear-gradient(135deg,#E8614A,#C94A35)">RS</div>
-        <div><strong>Rina Setiawati</strong><span>Ibu Rumah Tangga, Surabaya</span></div>
-      </div>
-    </div>
-    <div class="testi-card">
-      <div class="stars">★★★★★</div>
-      <blockquote>Koleksi fashionnya kekinian dan harganya masuk akal. Sudah order dress lebih dari 5 kali dan selalu happy dengan hasilnya. Highly recommended untuk cewek yang suka tampil stylish!</blockquote>
-      <div class="testi-author">
-        <div class="testi-av" style="background:linear-gradient(135deg,#7C4DFF,#512DA8)">AF</div>
-        <div><strong>Anisa Fitri</strong><span>Content Creator, Jakarta</span></div>
-      </div>
-    </div>
-    <div class="testi-card">
-      <div class="stars">★★★★★</div>
-      <blockquote>Nemu produk lifestyle yang susah dicari di tempat lain ada di sini. Harga kompetitif, proses checkout mudah, dan ada fitur lacak pesanan yang membantu banget. Akan terus belanja di sini!</blockquote>
-      <div class="testi-author">
-        <div class="testi-av" style="background:linear-gradient(135deg,#2E7D52,#1B5E35)">DP</div>
-        <div><strong>Diko Pratama</strong><span>Profesional Muda, Bandung</span></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ══ CONTACT ══ -->
+<!-- CONTACT -->
 <section class="contact reveal" id="kontak">
-  <div class="contact-grid">
-    <div class="contact-info">
-      <div class="s-eyebrow">Hubungi Kami</div>
-      <h2 class="s-title">Ada Pertanyaan?<br>Kami Siap Membantu</h2>
-      <p>Tim kami siap membantu Anda dengan pertanyaan seputar produk, pesanan, pengiriman, atau kemitraan bisnis. Jangan ragu untuk menghubungi kami!</p>
-
-      <div class="c-detail">
-        <div class="c-icon">📍</div>
-        <div>
-          <strong>Alamat Kantor</strong>
-          <span>Perumahan Palem Ganda Asri Jl. Kijang Raya A2/20, Kel. Meruyung, Kec. Limo, Kota Depok, Jawa Barat 16514</span>
-        </div>
-      </div>
-      <div class="c-detail">
-        <div class="c-icon">📞</div>
-        <div>
-          <strong>Telepon</strong>
-          <span><a href="tel:+6281958718474">+62 819-5871-8474</a></span>
-        </div>
-      </div>
-      <div class="c-detail">
-        <div class="c-icon">💬</div>
-        <div>
-          <strong>WhatsApp</strong>
-          <span><a href="https://wa.me/6281958718474">+62 819-5871-8474</a></span>
-        </div>
-      </div>
-      <div class="c-detail">
-        <div class="c-icon">✉️</div>
-        <div>
-          <strong>Email</strong>
-          <span><a href="mailto:adisuhendraspd@gmail.com">adisuhendraspd@gmail.com</a></span>
-        </div>
-      </div>
-      <div class="c-detail">
-        <div class="c-icon">⏰</div>
-        <div>
-          <strong>Jam Layanan</strong>
-          <span>Senin – Sabtu: 08.00 – 17.00 WIB<br>Minggu & Hari Libur: Tutup</span>
-        </div>
-      </div>
+  <div class="contact-g">
+    <div class="contact-l">
+      <div class="tag">Hubungi Kami</div>
+      <h2 class="h2">Ada yang Ingin<br>Anda Tanyakan?</h2>
+      <p>Kami terbuka untuk pertanyaan, masukan, maupun peluang kerjasama. Tim kami siap merespons setiap hari kerja.</p>
+      <div class="c-row"><div class="c-ic">📍</div><div><strong>Alamat</strong><span>Perumahan Palem Ganda Asri, Jl. Kijang Raya A2/20, Kel. Meruyung, Kec. Limo, Kota Depok, Jawa Barat 16514</span></div></div>
+      <div class="c-row"><div class="c-ic">📞</div><div><strong>Telepon & WhatsApp</strong><a href="tel:+6281958718474">+62 819-5871-8474</a></div></div>
+      <div class="c-row"><div class="c-ic">✉️</div><div><strong>Email</strong><a href="mailto:hanadigitalmedia@gmail.com">hanadigitalmedia@gmail.com</a></div></div>
+      <div class="c-row"><div class="c-ic">⏰</div><div><strong>Jam Kerja</strong><span>Senin – Sabtu, 08.00 – 17.00 WIB</span></div></div>
     </div>
-
-    <div class="contact-form">
-      <div class="cf-title">Kirim Pesan</div>
-      <div class="cf-sub">Isi form di bawah dan tim kami akan merespons dalam 1×24 jam</div>
-      <div class="frow">
-        <div class="fgroup"><label>Nama Lengkap *</label><input type="text" placeholder="Nama Anda" /></div>
-        <div class="fgroup"><label>No. WhatsApp *</label><input type="tel" placeholder="+62 8xx xxxx xxxx" /></div>
+    <div class="cf">
+      <h3>Kirim Pesan</h3>
+      <div class="cf-s">Kami akan membalas dalam 1×24 jam kerja</div>
+      <div class="fg-r">
+        <div class="fg"><label>Nama</label><input type="text" placeholder="Nama Anda" /></div>
+        <div class="fg"><label>Telepon</label><input type="tel" placeholder="+62 8xx" /></div>
       </div>
-      <div class="fgroup"><label>Email *</label><input type="email" placeholder="email@contoh.com" /></div>
-      <div class="fgroup">
-        <label>Topik Pesan</label>
+      <div class="fg"><label>Email</label><input type="email" placeholder="email@contoh.com" /></div>
+      <div class="fg"><label>Keperluan</label>
         <select>
-          <option value="">Pilih topik...</option>
-          <option>Pertanyaan Produk</option>
-          <option>Status Pesanan</option>
-          <option>Pengembalian / Retur</option>
-          <option>Kemitraan & Supplier</option>
-          <option>Kerjasama Iklan / Marketing</option>
+          <option value="">Pilih keperluan...</option>
+          <option>Pertanyaan Umum</option>
+          <option>Kerjasama Bisnis</option>
+          <option>Informasi Produk</option>
           <option>Lainnya</option>
         </select>
       </div>
-      <div class="fgroup"><label>Pesan *</label><textarea placeholder="Tuliskan pertanyaan atau pesan Anda di sini..."></textarea></div>
-      <button class="fsubmit" type="button" id="submitBtn">Kirim Pesan <span>›</span></button>
-      <p class="fprivacy">Dengan mengirim pesan ini, Anda menyetujui <a href="#kebijakan-privasi">Kebijakan Privasi</a> dan <a href="#syarat-ketentuan">Syarat & Ketentuan</a> kami. Data Anda dijaga kerahasiaannya dan tidak akan disebarkan kepada pihak ketiga tanpa persetujuan Anda.</p>
+      <div class="fg"><label>Pesan</label><textarea placeholder="Tuliskan pesan Anda..."></textarea></div>
+      <button class="fsub" id="sb">Kirim Pesan →</button>
+      <p class="fn">Dengan mengirim pesan, Anda menyetujui <a href="#">Kebijakan Privasi</a> kami. Data Anda tidak akan disebarkan kepada pihak ketiga.</p>
     </div>
   </div>
 </section>
 
-<!-- ══ FOOTER ══ -->
-<footer id="kebijakan-privasi">
-  <div class="footer-main">
-    <div class="footer-brand">
-      <a href="#" class="logo-wrap" style="margin-bottom:.5rem;display:inline-flex;">
-        <div class="logo-icon">H</div>
-        <div class="logo-text">Hana Digital Media<small>PT Hana Digital Media</small></div>
-      </a>
-      <p>Platform e-commerce terpercaya untuk produk kebutuhan rumah tangga, fashion, dan lifestyle. Berkantor pusat di Jakarta, melayani seluruh Indonesia.</p>
-    </div>
-    <div class="footer-col">
-      <h4>Perusahaan</h4>
-      <ul>
-        <li><a href="#tentang">Tentang Kami</a></li>
-        <li><a href="#kategori">Kategori Produk</a></li>
-        <li><a href="#platform">Platform</a></li>
-        <li><a href="#google-ads">Iklan Digital</a></li>
-        <li><a href="#kontak">Hubungi Kami</a></li>
-      </ul>
-    </div>
-    <div class="footer-col" id="syarat-ketentuan">
-      <h4>Bantuan</h4>
-      <ul>
-        <li><a href="#">Cara Berbelanja</a></li>
-        <li><a href="#">Info Pengiriman</a></li>
-        <li><a href="#">Kebijakan Retur</a></li>
-        <li><a href="#">Metode Pembayaran</a></li>
-        <li><a href="#">FAQ</a></li>
-      </ul>
-    </div>
-    <div class="footer-col">
-      <h4>Legal</h4>
-      <ul>
-        <li><a href="privacy-policy.html">Kebijakan Privasi</a></li>
-        <li><a href="disclaimer.html">Disclaimer</a></li>
-        <li><a href="#">Kebijakan Cookie</a></li>
-        <li><a href="#">Kepatuhan Iklan</a></li>
-      </ul>
-    </div>
+<footer>
+  <span class="f-logo">PT Hana Digital Media</span>
+  <div class="f-links">
+    <a href="#">Kebijakan Privasi</a>
+    <a href="#">Syarat & Ketentuan</a>
   </div>
-  <div class="footer-bottom">
-    <p>© 2026 PT Hana Digital Media. Semua hak dilindungi undang-undang.</p>
-    <div class="footer-legal">
-      <a href="privacy-policy.html">Kebijakan Privasi</a>
-      <a href="disclaimer.html">Disclaimer</a>
-      <a href="#">Peta Situs</a>
-    </div>
-  </div>
+  <p>© 2026 PT Hana Digital Media. Semua hak dilindungi.</p>
 </footer>
 
 <script>
-  // Nav scroll
-  const nav = document.getElementById('nav');
-  addEventListener('scroll', () => nav.classList.toggle('scrolled', scrollY > 50));
-
-  // Reveal on scroll
-  const obs = new IntersectionObserver(entries => {
-    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); obs.unobserve(e.target); } });
-  }, { threshold: 0.1 });
+  const obs = new IntersectionObserver(e => e.forEach(x => { if(x.isIntersecting){x.target.classList.add('in');obs.unobserve(x.target);} }), {threshold:.1});
   document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
-
-  // Form submit
-  document.getElementById('submitBtn').addEventListener('click', function() {
-    const btn = this;
-    btn.textContent = '✓ Pesan Terkirim!';
-    btn.style.background = '#16A34A';
-    btn.disabled = true;
-    setTimeout(() => {
-      btn.innerHTML = 'Kirim Pesan <span>›</span>';
-      btn.style.background = '';
-      btn.disabled = false;
-    }, 3500);
+  document.getElementById('sb').addEventListener('click', function(){
+    this.textContent = '✓ Terkirim!';
+    this.style.background = '#16A34A';
+    this.disabled = true;
+    setTimeout(()=>{ this.textContent='Kirim Pesan →'; this.style.background=''; this.disabled=false; }, 3000);
   });
 </script>
 </body>
